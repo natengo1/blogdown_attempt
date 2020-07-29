@@ -1,57 +1,68 @@
-baseurl = "/"
+baseURL = "/"
 languageCode = "en-us"
-title = "Volley Viz"
-theme = "blackburn"
-author = "Nate Ngo"
-copyright = "&copy; 2016. All rights reserved."
-canonifyurls = true
-paginate = 10
+title = "Volley Visualization"
+theme = "minimal"
+disqusShortname = "natengo1" # delete this to disable disqus comments
+#googleAnalytics = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
-[indexes]
-  tag = "tags"
-  topic = "topics"
-
 [params]
-  # Shown in the home page
-  subtitle = "Viewing Volleyball Data in a Different Light"
-  #brand = "Blackburn"
-  #googleAnalytics = "Your Google Analytics tracking ID"
-  #disqus = "Your Disqus shortname"
-  # CSS name for highlight.js
-  highlightjs = "androidstudio"
-  dateFormat = "02 Jan 2006, 15:04"
+    author = "Nate Ngo"
+    description = "Volleyball. Data. Visualization. Analysis. Learning."
+    githubUsername = "natengo1"
+    accent = "black"
+    showBorder = true
+    backgroundColor = "white"
+    font = "Raleway" # should match the name on Google Fonts!
+    highlight = true
+    highlightStyle = "default"
+    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
 
-[menu]
-  # Shown in the side menu.
-  [[menu.main]]
-    name = "Home"
-    pre = "<i class='fa fa-home fa-fw'></i>"
-    weight = 1
-    identifier = "home"
+[[menu.main]]
     url = "/"
-  [[menu.main]]
-    name = "Posts"
-    pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 2
-    identifier = "post"
-    url = "/post/"
-  [[menu.main]]
-    name = "About"
-    pre = "<i class='fa fa-user fa-fw'></i>"
-    weight = 3
-    identifier = "about"
-    url = "/about/"
-  [[menu.main]]
-    name = "Contact"
-    pre = "<i class='fa fa-phone fa-fw'></i>"
-    weight = 4
-    url = "/contact/"
+    name = "Home"
+    weight = 1
 
-[social]
-  # Link your social networking accouns to the side menu
-  # by entering your username or ID.
-  twitter = "natengo1"
-  instagram = "natengo1"
-  github = "natengo1"
-  linkedin = "natengo1"
+[[menu.main]]
+    url = "/about/"
+    name = "About"
+    weight = 2
+
+[[menu.main]]
+    url = "/post/"
+    name = "Posts"
+    weight = 3
+
+#[[menu.main]]
+#    url = "/project/"
+#    name = "Projects"
+#    weight = 4
+
+# Social icons to be shown on the right-hand side of the navigation bar.
+# The "name" field should match the name of the icon in Font Awesome.
+# The list of available icons can be found at http://fontawesome.io/icons.
+
+#[[menu.icon]]
+#    url = "mailto:me@example.com"
+#    name = "envelope-o"
+#    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/natengo1/"
+    name = "github"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://twitter.com/natengo1/"
+    name = "twitter"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/natengo1/"
+    name = "linkedin"
+    weight = 3
+
+#[[menu.icon]]
+#    url = "https://www.stackoverflow.com/username/"
+#    name = "stack-overflow"
+#    weight = 5

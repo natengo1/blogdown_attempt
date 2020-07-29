@@ -1,9 +1,6 @@
 ---
-categories:
-- Development
-- golang
 date: "2014-04-02"
-description: ""
+draft: false
 tags:
 - go
 - golang
