@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Nate Ngo"
+title = "Volley Viz"
 theme = "blackburn"
 author = "Nate Ngo"
 copyright = "&copy; 2016. All rights reserved."
@@ -14,10 +14,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
   # Shown in the home page
-  subtitle = "Volleyball Stuff"
-  brand = "Blackburn"
-  googleAnalytics = "Your Google Analytics tracking ID"
-  disqus = "Your Disqus shortname"
+  subtitle = "Viewing Volleyball Data in a Different Light"
+  #brand = "Blackburn"
+  #googleAnalytics = "Your Google Analytics tracking ID"
+  #disqus = "Your Disqus shortname"
   # CSS name for highlight.js
   highlightjs = "androidstudio"
   dateFormat = "02 Jan 2006, 15:04"
