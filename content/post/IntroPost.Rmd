@@ -10,17 +10,17 @@ tags: ["ggplot2", "tidyverse","savestanfordmvb"]
 
 First of all, thanks for stopping by. My hope is to post here on a somewhat regular basis, but I can't make any promises. I guess you'll just have to keep checking back for updates. Second, I hope you're doing alright in these strange, coronavirus times.
 
-I decided to start this blog for a number of reasons, the most personal of which is to start a journey to the ["Kinda Good Island"](https://thelearnerlab.com/kinda-good-island/) (in the words of [Learner Lab](thelearnerlab.com) founder [Trevor Ragan](twitter.com)) of writing/blogging/putting ideas out in the open. I'm starting neck deep in the "Feeling Weird Swamp" portion of this path, but I've been hiding behind fear and inaction for too long.
+I decided to start this blog for a number of reasons, the most personal of which is to start a journey to the ["Kinda Good Island"](https://thelearnerlab.com/kinda-good-island/) (in the words of [Learner Lab](thelearnerlab.com) founder [Trevor Ragan](twitter.com/learnerlab/)) of writing/blogging/putting ideas out in the open. I'm starting neck deep in the "Feeling Weird Swamp" portion of this path, but I've been hiding behind fear and inaction for too long.
 
 With that said, let's get into this first post!
 
 # [#savestanfordmvb](https://www.change.org/p/stanford-university-reinstate-the-stanford-men-s-volleyball-program?utm_content=cl_sharecopy_23354124_en-US%3A4&recruiter=1129383434&utm_source=share_petition&utm_medium=copylink&utm_campaign=share_petition)
 
-In the midst of all the unfortunate happenings in and out of the volleyball world, Stanford's athletics department [announcing they will be dropping their Men's Volleyball program after the 2020-21 season](https://www.stanforddaily.com/2020/07/13/sports-game-point-1/) is certainly a heavy blow. Going to watch high level volleyball matches at Stanford (both men's and women's) further stoked my attachment to this sport, which has led me to where I am today. Today's post will take a look at Stanford Men's Volleyball Program's contribution to the USA Men's National Team roster since 2006 (when the USA men began regularly competing in the FIVB World League). 
+In the midst of all the unfortunate happenings in and out of the volleyball world, Stanford's athletics department [announcing they will be dropping their Men's Volleyball program after the 2020-21 season](https://www.stanforddaily.com/2020/07/13/sports-game-point-1/) is certainly a heavy blow for us in the sport. Going to watch high level volleyball matches at Stanford (both men's and women's) further stoked my attachment to this sport during high school, which has led me to where I am today. Today's post will take a look at Stanford Men's Volleyball Program's contribution to the USA Men's National Team (MNT) roster since 2006 (when the USA men began regularly competing in the FIVB World League). 
 
 ## The Data
 
-I pulled data from the [USA Volleyball](https://www.teamusa.org/usa-volleyball/usa-teams/indoor-volleyball/men/rosters) website which includes historical rosters back to 2003 for the MNT. I took travel rosters for FIVB senior level events: World League, Volleyball Nations League, Grand Champions Cup, World Championships, World Cup, and the Olympic Games, including alternates. I did this manually by copying and pasting each roster then cleaning the data up within Excel (still have a lot to learn about web scraping!).
+I pulled data from the [USA Volleyball](https://www.teamusa.org/usa-volleyball/usa-teams/indoor-volleyball/men/rosters) website which includes historical rosters back to 2003 for the MNT. I took travel rosters for FIVB senior level events: World League, Volleyball Nations League, Grand Champions Cup, World Championships, World Cup, and the Olympic Games, including alternates. I did this manually by copying and pasting each roster then cleaning the data up within Excel (I still have a lot to learn about web scraping!).
 
 Once I have the data in a tidy format (each column is a variable, each row is an observation), I read the data into R using the `readr` package from `tidyverse`.
 
