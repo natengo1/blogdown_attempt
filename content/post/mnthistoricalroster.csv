@@ -1,0 +1,727 @@
+name,position,city,state,college,year,competition
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2019,World Cup
+Aaron Russell,OH,Ellicott City,MD,Penn State,2019,World Cup
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2019,World Cup
+Mitch Stahl,MB,Chambersburg,PA,UCLA,2019,World Cup
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2019,World Cup
+Michael Saeta,SS,South Pasadena,CA,UC Irvine,2019,World Cup
+James Shaw,Opp,Woodside,CA,Stanford,2019,World Cup
+Micah Christenson,S,Honolulu,HI,USC,2019,World Cup
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2019,World Cup
+Benjamin Patch,Opp,Provo,UT,BYU,2019,World Cup
+Micah Ma'a,S,Kaneohe,HI,UCLA,2019,World Cup
+Josh Tuaniga,S,Long Beach,CA,Long Beach State,2019,World Cup
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2019,World Cup
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2019,World Cup
+David Smith,MB,Saugus,CA,UC Irvine,2019,World Cup
+Erik Shoji,L,Honolulu,HI,Stanford,2019,World Cup
+Taylor Sander,OH,Huntington Beach,CA,BYU,2019,VNL
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2019,VNL
+Kyle Ensing,Opp,Valencia,CA,Long Beach State,2019,VNL
+Mitch Stahl,MB,Chambersburg,PA,UCLA,2019,VNL
+Kawika Shoji,S,Honolulu,HI,Stanford,2019,VNL
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2019,VNL
+Jake Langlois,OH,San Jose,CA,BYU,2019,VNL
+Micah Ma'a,S,Kaneohe,HI,UCLA,2019,VNL
+Josh Tuaniga,S,Long Beach,CA,Long Beach State,2019,VNL
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2019,VNL
+David Smith,MB,Saugus,CA,UC Irvine,2019,VNL
+Dustin Watten,L,Long Beach,CA,Long Beach State,2019,VNL
+Erik Shoji,L,Honolulu,HI,Stanford,2019,VNL
+Kyle Russell,Opp,Loomis,CA,UC Irvine,2019,VNL
+Taylor Sander,OH,Huntington Beach,CA,BYU,2019,VNL
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2019,VNL
+Kyle Ensing,Opp,Valencia,CA,Long Beach State,2019,VNL
+Mitch Stahl,MB,Chambersburg,PA,UCLA,2019,VNL
+Kawika Shoji,S,Honolulu,HI,Stanford,2019,VNL
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2019,VNL
+Micah Christenson,S,Honolulu,HI,USC,2019,VNL
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2019,VNL
+Benjamin Patch,Opp,Provo,UT,BYU,2019,VNL
+Micah Ma'a,S,Kaneohe,HI,UCLA,2019,VNL
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2019,VNL
+David Smith,MB,Saugus,CA,UC Irvine,2019,VNL
+Erik Shoji,L,Honolulu,HI,Stanford,2019,VNL
+Kyle Dagostino,L,Tampa,FL,Stanford,2019,VNL
+Taylor Sander,OH,Huntington Beach,CA,BYU,2019,VNL
+Kyle Ensing,Opp,Valencia,CA,Long Beach State,2019,VNL
+Mitch Stahl,MB,Chambersburg,PA,UCLA,2019,VNL
+Kawika Shoji,S,Honolulu,HI,Stanford,2019,VNL
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2019,VNL
+Micah Christenson,S,Honolulu,HI,USC,2019,VNL
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2019,VNL
+Benjamin Patch,Opp,Provo,UT,BYU,2019,VNL
+Micah Ma'a,S,Kaneohe,HI,UCLA,2019,VNL
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2019,VNL
+Taylor Averill,MB,San Jose,CA,Hawai'i,2019,VNL
+David Smith,MB,Saugus,CA,UC Irvine,2019,VNL
+Erik Shoji,L,Honolulu,HI,Stanford,2019,VNL
+Larry Tuileta,L,Honolulu,HI,Hawai'i,2019,VNL
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2019,VNL
+Taylor Sander,OH,Huntington Beach,CA,BYU,2019,VNL
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2019,VNL
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2019,VNL
+Micah Christenson,S,Honolulu,HI,USC,2019,VNL
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2019,VNL
+Benjamin Patch,Opp,Provo,UT,BYU,2019,VNL
+Micah Ma'a,S,Kaneohe,HI,UCLA,2019,VNL
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2019,VNL
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2019,VNL
+Taylor Averill,MB,San Jose,CA,Hawai'i,2019,VNL
+David Smith,MB,Saugus,CA,UC Irvine,2019,VNL
+Erik Shoji,L,Honolulu,HI,Stanford,2019,VNL
+Larry Tuileta Jr.,L,Honolulu,HI,Hawai'i,2019,VNL
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2019,VNL
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2019,VNL
+Jake Langlois,OH,San Jose,CA,BYU,2019,VNL
+Benjamin Patch,Opp,Provo,UT,BYU,2019,VNL
+Micah Ma'a,S,Kaneohe,HI,UCLA,2019,VNL
+Josh Tuaniga,S,Long Beach,CA,Long Beach State,2019,VNL
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2019,VNL
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2019,VNL
+Taylor Averill,MB,San Jose,CA,Hawai'i,2019,VNL
+Dustin Watten,L,Long Beach,CA,Long Beach State,2019,VNL
+Kyle Dagostino,L,Tampa,FL,Stanford,2019,VNL
+Kyle Russell,Opp,Loomis,CA,UC Irvine,2019,VNL
+Price Jarman,MB,Las Vegas,NV,BYU,2019,VNL
+George Huhmann,MB,St. Louis,MO,Princeton,2019,VNL
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2019,VNL
+Aaron Russell,OH,Ellicott City,MD,Penn State,2019,VNL
+Taylor Sander,OH,Huntington Beach,CA,BYU,2019,VNL
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2019,VNL
+Kawika Shoji,S,Honolulu,HI,Stanford,2019,VNL
+Micah Christenson,S,Honolulu,HI,USC,2019,VNL
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2019,VNL
+Benjamin Patch,Opp,Provo,UT,BYU,2019,VNL
+Micah Ma'a,S,Kaneohe,HI,UCLA,2019,VNL
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2019,VNL
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2019,VNL
+David Smith,MB,Saugus,CA,UC Irvine,2019,VNL
+Erik Shoji,L,Honolulu,HI,Stanford,2019,VNL
+George Huhmann,MB,St. Louis,MO,Princeton,2019,VNL
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2019,Olympic Qualifier
+Aaron Russell,OH,Ellicott City,MD,Penn State,2019,Olympic Qualifier
+Taylor Sander,OH,Huntington Beach,CA,BYU,2019,Olympic Qualifier
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2019,Olympic Qualifier
+Mitch Stahl,MB,Chambersburg,PA,UCLA,2019,Olympic Qualifier
+Kawika Shoji,S,Honolulu,HI,Stanford,2019,Olympic Qualifier
+Micah Christenson,S,Honolulu,HI,USC,2019,Olympic Qualifier
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2019,Olympic Qualifier
+Benjamin Patch,Opp,Provo,UT,BYU,2019,Olympic Qualifier
+Micah Ma'a,S,Kaneohe,HI,UCLA,2019,Olympic Qualifier
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2019,Olympic Qualifier
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2019,Olympic Qualifier
+David Smith,MB,Saugus,CA,UC Irvine,2019,Olympic Qualifier
+Erik Shoji,L,Honolulu,HI,Stanford,2019,Olympic Qualifier
+Taylor Sander,OH,Huntington Beach,CA,BYU,2018,VNL
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2018,VNL
+Kawika Shoji,S,Honolulu,HI,Stanford,2018,VNL
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2018,VNL
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2018,VNL
+Benjamin Patch,Opp,Provo,UT,BYU,2018,VNL
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2018,VNL
+Jake Langlois,OH,San Jose,CA,BYU,2018,VNL
+Taylor Averill,MB,San Jose,CA,Hawai'i,2018,VNL
+David Smith,MB,Saugus,CA,UC Irvine,2018,VNL
+Dustin Watten,L,Long Beach,CA,Long Beach State,2018,VNL
+Erik Shoji,L,Honolulu,HI,Stanford,2018,VNL
+Jonah Seif,S,Thousand Oaks,CA,UC Santa Barbara,2018,VNL
+Kyle Ensing,Opp,Valencia,CA,Long Beach State,2018,VNL
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2018,VNL
+Aaron Russell,OH,Ellicott City,MD,Penn State,2018,VNL
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2018,VNL
+Kawika Shoji,S,Honolulu,HI,Stanford,2018,VNL
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2018,VNL
+Micah Christenson,S,Honolulu,HI,USC,2018,VNL
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2018,VNL
+Benjamin Patch,Opp,Provo,UT,BYU,2018,VNL
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2018,VNL
+Jake Langlois,OH,San Jose,CA,BYU,2018,VNL
+Taylor Averill,MB,San Jose,CA,Hawai'i,2018,VNL
+David Smith,MB,Saugus,CA,UC Irvine,2018,VNL
+Dustin Watten,L,Long Beach,CA,Long Beach State,2018,VNL
+Erik Shoji,L,Honolulu,HI,Stanford,2018,VNL
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2018,VNL
+Aaron Russell,OH,Ellicott City,MD,Penn State,2018,VNL
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2018,VNL
+Kawika Shoji,S,Honolulu,HI,Stanford,2018,VNL
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2018,VNL
+Dan McDonnell,MB,Phoenix,AZ,UC Irvine,2018,VNL
+Micah Christenson,S,Honolulu,HI,USC,2018,VNL
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2018,VNL
+Benjamin Patch,Opp,Provo,UT,BYU,2018,VNL
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2018,VNL
+Jake Langlois,OH,San Jose,CA,BYU,2018,VNL
+David Smith,MB,Saugus,CA,UC Irvine,2018,VNL
+Dustin Watten,L,Long Beach,CA,Long Beach State,2018,VNL
+Erik Shoji,L,Honolulu,HI,Stanford,2018,VNL
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2018,VNL
+Aaron Russell,OH,Ellicott City,MD,Penn State,2018,VNL
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2018,VNL
+Kawika Shoji,S,Honolulu,HI,Stanford,2018,VNL
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2018,VNL
+Dan McDonnell,MB,Phoenix,AZ,UC Irvine,2018,VNL
+Micah Christenson,S,Honolulu,HI,USC,2018,VNL
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2018,VNL
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2018,VNL
+Jake Langlois,OH,San Jose,CA,BYU,2018,VNL
+David Smith,MB,Saugus,CA,UC Irvine,2018,VNL
+Dustin Watten,L,Long Beach,CA,Long Beach State,2018,VNL
+Erik Shoji,L,Honolulu,HI,Stanford,2018,VNL
+Kyle Ensing,Opp,Valencia,CA,Long Beach State,2018,VNL
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2018,VNL
+Aaron Russell,OH,Ellicott City,MD,Penn State,2018,VNL
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2018,VNL
+Kawika Shoji,S,Honolulu,HI,Stanford,2018,VNL
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2018,VNL
+Dan McDonnell,MB,Phoenix,AZ,UC Irvine,2018,VNL
+Micah Christenson,S,Honolulu,HI,USC,2018,VNL
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2018,VNL
+Brenden Sander,OH,Huntington Beach,CA,BYU,2018,VNL
+Jake Langlois,OH,San Jose,CA,BYU,2018,VNL
+David Smith,MB,Saugus,CA,UC Irvine,2018,VNL
+Dustin Watten,L,Long Beach,CA,Long Beach State,2018,VNL
+Erik Shoji,L,Honolulu,HI,Stanford,2018,VNL
+Kyle Ensing,Opp,Valencia,CA,Long Beach State,2018,VNL
+Matthew Anderson,Opp/OH,West Seneca,NY,Penn State,2018,VNL
+Aaron Russell,OH,Ellicott City,MD,Penn State,2018,VNL
+Taylor Sander,OH,Huntington Beach,CA,BYU,2018,VNL
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2018,VNL
+Kawika Shoji,S,Honolulu,HI,Stanford,2018,VNL
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2018,VNL
+Dan McDonnell,MB,Phoenix,AZ,UC Irvine,2018,VNL
+Micah Christenson,S,Honolulu,HI,USC,2018,VNL
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2018,VNL
+Benjamin Patch,Opp,Provo,UT,BYU,2018,VNL
+David Smith,MB,Saugus,CA,UC Irvine,2018,VNL
+Dustin Watten,L,Long Beach,CA,Long Beach State,2018,VNL
+Erik Shoji,L,Honolulu,HI,Stanford,2018,VNL
+Kyle Ensing,Opp,Valencia,CA,Long Beach State,2018,VNL
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2018,World Championship
+Aaron Russell,OH,Ellicott City,MD,Penn State,2018,World Championship
+Taylor Sander,OH,Huntington Beach,CA,BYU,2018,World Championship
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2018,World Championship
+Kawika Shoji,S,Honolulu,HI,Stanford,2018,World Championship
+Dan McDonnell,MB,Phoenix,AZ,UC Irvine,2018,World Championship
+Micah Christenson,S,Honolulu,HI,USC,2018,World Championship
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2018,World Championship
+Benjamin Patch,Opp,Provo,UT,BYU,2018,World Championship
+Jake Langlois,OH,San Jose,CA,BYU,2018,World Championship
+Taylor Averill,MB,San Jose,CA,Hawai'i,2018,World Championship
+David Smith,MB,Saugus,CA,UC Irvine,2018,World Championship
+Dustin Watten,L,Long Beach,CA,Long Beach State,2018,World Championship
+Erik Shoji,L,Honolulu,HI,Stanford,2018,World Championship
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2017,Grand Champions Cup
+Aaron Russell,OH,Ellicott City,MD,Penn State,2017,Grand Champions Cup
+Taylor Sander,OH,Huntington Beach,CA,BYU,2017,Grand Champions Cup
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2017,Grand Champions Cup
+Kawika Shoji,S,Honolulu,HI,Stanford,2017,Grand Champions Cup
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2017,Grand Champions Cup
+Micah Christenson,S,Honolulu,HI,USC,2017,Grand Champions Cup
+Benjamin Patch,Opp,Provo,UT,BYU,2017,Grand Champions Cup
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2017,Grand Champions Cup
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2017,Grand Champions Cup
+Taylor Averill,MB,San Jose,CA,Hawai'i,2017,Grand Champions Cup
+David Smith,MB,Saugus,CA,UC Irvine,2017,Grand Champions Cup
+Dustin Watten,L,Long Beach,CA,Long Beach State,2017,Grand Champions Cup
+Erik Shoji,L,Honolulu,HI,Stanford,2017,Grand Champions Cup
+Tommy Carmody,MB,Orland Park,IL,Pepperdine,2017,World League
+Taylor Sander,OH,Huntington Beach,CA,BYU,2017,World League
+Jeff Jendryk,MB,Wheaton,IL,Loyola of Chicago,2017,World League
+James Shaw,S,Woodside,CA,Stanford,2017,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2017,World League
+Jake Langlois,OH,San Jose,CA,BYU,2017,World League
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2017,World League
+Micah Christenson,S,Honolulu,HI,USC,2017,World League
+Dan McDonnell,MB,Glendale,AZ,UC Irvine,2017,World League
+Benjamin Patch,Opp,Provo,UT,BYU,2017,World League
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2017,World League
+Jayson Jablonsky,OH,Yorba Linda,CA,UC Irvine,2017,World League
+T.J. DeFalco,OH,Huntington Beach,CA,Long Beach State,2017,World League
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2017,World League
+Taylor Averill,MB,San Jose,CA,Hawai'i,2017,World League
+David Smith,MB,Saugus,CA,UC Irvine,2017,World League
+Dustin Watten,L,Long Beach,CA,Long Beach State,2017,World League
+Erik Shoji,L,Honolulu,HI,Stanford,2017,World League
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2016,Olympic Games
+Aaron Russell,OH,Ellicott City,MD,Penn State,2016,Olympic Games
+Taylor Sander,OH,Huntington Beach,CA,BYU,2016,Olympic Games
+David Lee,MB,Alpine,CA,Long Beach State,2016,Olympic Games
+Kawika Shoji,S,Honolulu,HI,Stanford,2016,Olympic Games
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2016,Olympic Games
+Murphy Troy,Opp,St. Louis,MO,USC,2016,Olympic Games
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2016,Olympic Games
+Micah Christenson,S,Honolulu,HI,USC,2016,Olympic Games
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2016,Olympic Games
+David Smith,MB,Saugus,CA,UC Irvine,2016,Olympic Games
+Erik Shoji,L,Honolulu,HI,Stanford,2016,Olympic Games
+James Shaw,S,Woodside,CA,Stanford,2016,Olympic Games Alternates
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2016,Olympic Games Alternates
+Russell Holmes,MB,Fountain Valley,CA,BYU,2016,Olympic Games Alternates
+Dan McDonnell,MB,Glendale,AZ,UC Irvine,2016,Olympic Games Alternates
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2016,Olympic Games Alternates
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2016,Olympic Games Alternates
+Jonah Seif,S,Thousand Oaks,CA,UC Santa Barbara,2016,Olympic Games Alternates
+Dustin Watten,L,Long Beach,CA,Long Beach State,2016,Olympic Games Alternates
+Matthew Anderson,Opp,West Seneca,NY,Penn State,2016,World League
+Aaron Russell,OH,Ellicott City,MD,Penn State,2016,World League
+Taylor Sander,OH,Huntington Beach,CA,BYU,2016,World League
+David Lee,MB,Alpine,CA,Long Beach State,2016,World League
+James Shaw,S,Woodside,CA,Stanford,2016,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2016,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2016,World League
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2016,World League
+Murphy Troy,Opp,St. Louis,MO,USC,2016,World League
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2016,World League
+Micah Christenson,S,Honolulu,HI,USC,2016,World League
+Russell Holmes,MB,Fountain Valley,CA,BYU,2016,World League
+Dan McDonnell,MB,Glendale,AZ,UC Irvine,2016,World League
+Benjamin Patch,Opp,Provo,UT,BYU,2016,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2016,World League
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2016,World League
+David Smith,MB,Saugus,CA,UC Irvine,2016,World League
+Dustin Watten,L,Long Beach,CA,Long Beach State,2016,World League
+Erik Shoji,L,Honolulu,HI,Stanford,2016,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2015,World Cup
+Aaron Russell,OH,Ellicott City,MD,Penn State,2015,World Cup
+Taylor Sander,OH,Huntington Beach,CA,BYU,2015,World Cup
+David Lee,MB,Alpine,CA,Long Beach State,2015,World Cup
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2015,World Cup
+Kawika Shoji,S,Honolulu,HI,Stanford,2015,World Cup
+Murphy Troy,Opp,St. Louis,MO,USC,2015,World Cup
+Micah Christenson,S,Honolulu,HI,USC,2015,World Cup
+Russell Holmes,MB,Fountain Valley,CA,BYU,2015,World Cup
+Jayson Jablonsky,OH,Yorba Linda,CA,UC Irvine,2015,World Cup
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2015,World Cup
+David Smith,MB,Saugus,CA,UC Irvine,2015,World Cup
+Dustin Watten,L,Long Beach,CA,Long Beach State,2015,World Cup
+Erik Shoji,L,Honolulu,HI,Stanford,2015,World Cup
+Matthew Anderson,OH/OPP,West Seneca,NY,Penn State,2015,World League
+Aaron Russell,OH,Ellicott City,MD,Penn State,2015,World League
+Taylor Sander,OH,Huntington Beach,CA,BYU,2015,World League
+David Lee,MB,Alpine,CA,Long Beach State,2015,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2015,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2015,World League
+Murphy Troy,Opp,St. Louis,MO,USC,2015,World League
+Thomas Jaeschke,OH,Wheaton,IL,Loyola of Chicago,2015,World League
+Micah Christenson,S,Honolulu,HI,USC,2015,World League
+Russell Holmes,MB,Fountain Valley,CA,BYU,2015,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2015,World League
+David Smith,MB,Saugus,CA,UC Irvine,2015,World League
+Dustin Watten,L,Long Beach,CA,Long Beach State,2015,World League
+Erik Shoji,L,Honolulu,HI,Stanford,2015,World League
+Matthew Anderson,OH/Opp,West Seneca,NY,Penn State,2014,World Championship
+Taylor Sander,OH,Huntington Beach,CA,BYU,2014,World Championship
+David Lee,MB,Alpine,CA,Long Beach State,2014,World Championship
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2014,World Championship
+Kawika Shoji,S,Honolulu,HI,Stanford,2014,World Championship
+Tony Ciarelli,OH,Huntington Beach,CA,USC,2014,World Championship
+Micah Christenson,S,Honolulu,HI,USC,2014,World Championship
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2014,World Championship
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2014,World Championship
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2014,World Championship
+Alfee Reft,L,Oxnard,CA,Hawai'i,2014,World Championship
+David Smith,MB,Saugus,CA,UC Irvine,2014,World Championship
+Nick Vogel,MB,San Diego,CA,UCLA,2014,World Championship
+Erik Shoji,L,Honolulu,HI,Stanford,2014,World Championship
+Matthew Anderson,OH,West Seneca,NY,Penn State,2014,World League
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2014,World League
+Taylor Sander,OH,Huntington Beach,CA,BYU,2014,World League
+David Lee,MB,Alpine,CA,Long Beach State,2014,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2014,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2014,World League
+Micah Christenson,S,Honolulu,HI,USC,2014,World League
+Russell Holmes,MB,Fountain Valley,CA,BYU,2014,World League
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2014,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2014,World League
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2014,World League
+Erik Shoji,L,Honolulu,HI,Stanford,2014,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2014,World League
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2014,World League
+Taylor Sander,OH,Huntington Beach,CA,BYU,2014,World League
+David Lee,MB,Alpine,CA,Long Beach State,2014,World League
+Ryan Ammerman,S,Denver,CO,UC Irvine,2014,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2014,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2014,World League
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2014,World League
+Murphy Troy,Opp,St. Louis,MO,USC,2014,World League
+Tony Ciarelli,OH,Huntington Beach,CA,USC,2014,World League
+Micah Christenson,S,Honolulu,HI,USC,2014,World League
+Russell Holmes,MB,Fountain Valley,CA,BYU,2014,World League
+Futi Tavana,MB,Kalaheo,HI,BYU,2014,World League
+Jeff Menzel,OH,Santa Barbara,CA,UC Santa Barbara,2014,World League
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2014,World League
+Dustin Watten,L,Long Beach,CA,Long Beach State,2014,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2014,World League
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2014,World League
+Alfee Reft,L,Oxnard,CA,Hawai'i,2014,World League
+David Smith,MB,Saugus,CA,UC Irvine,2014,World League
+James Shaw,S,Woodside,CA,Stanford,2014,World League
+Erik Shoji,L,Honolulu,HI,Stanford,2014,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2013,Grand Champions Cup
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2013,Grand Champions Cup
+David Lee,MB,Alpine,CA,Long Beach State,2013,Grand Champions Cup
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2013,Grand Champions Cup
+Kawika Shoji,S,Honolulu,HI,Stanford,2013,Grand Champions Cup
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2013,Grand Champions Cup
+Murphy Troy,Opp,St. Louis,MO,USC,2013,Grand Champions Cup
+Micah Christenson,S,Honolulu,HI,USC,2013,Grand Champions Cup
+Futi Tavana,MB,Kalaheo,HI,BYU,2013,Grand Champions Cup
+Jeff Menzel,OH,Santa Barbara,CA,UC Santa Barbara,2013,Grand Champions Cup
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2013,Grand Champions Cup
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2013,Grand Champions Cup
+Erik Shoji,L,Honolulu,HI,Stanford,2013,Grand Champions Cup
+David Smith,MB,Saugus,CA,UC Irvine,2013,Grand Champions Cup
+Matthew Anderson,OH,West Seneca,NY,Penn State,2013,World League
+David Lee,MB,Alpine,CA,Long Beach State,2013,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2013,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2013,World League
+Kyle Caldwell,S,Newport Beach,CA,UCLA,2013,World League
+Murphy Troy,Opp,St. Louis,MO,USC,2013,World League
+Tony Ciarelli,OH,Huntington Beach,CA,USC,2013,World League
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2013,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2013,World League
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2013,World League
+David Smith,MB,Saugus,CA,UC Irvine,2013,World League
+Erik Shoji,L,Honolulu,HI,Stanford,2013,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2013,World League
+David Lee,MB,Alpine,CA,Long Beach State,2013,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2013,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2013,World League
+Kyle Caldwell,S,Newport Beach,CA,UCLA,2013,World League
+Murphy Troy,Opp,St. Louis,MO,USC,2013,World League
+Tony Ciarelli,OH,Huntington Beach,CA,USC,2013,World League
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2013,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2013,World League
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2013,World League
+David Smith,MB,Saugus,CA,UC Irvine,2013,World League
+Erik Shoji,L,Honolulu,HI,Stanford,2013,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2013,World League
+David Lee,MB,Alpine,CA,Long Beach State,2013,World League
+Rich Lambourne,L,Tustin,CA,BYU,2013,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2013,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2013,World League
+Kyle Caldwell,S,Newport Beach,CA,UCLA,2013,World League
+Murphy Troy,Opp,St. Louis,MO,USC,2013,World League
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2013,World League
+Jayson Jablonsky,OH,Yorba Linda,CA,UC Irvine,2013,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2013,World League
+David Smith,MB,Saugus,CA,UC Irvine,2013,World League
+Erik Shoji,L,Honolulu,HI,Stanford,2013,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2013,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2013,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2013,World League
+Murphy Troy,Opp,St. Louis,MO,USC,2013,World League
+Tony Ciarelli,OH,Huntington Beach,CA,USC,2013,World League
+Brian Thornton,S,San Clemente,CA,UC Irvine,2013,World League
+Russell Holmes,MB,Fountain Valley,CA,BYU,2013,World League
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2013,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2013,World League
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2013,World League
+David Smith,MB,Saugus,CA,UC Irvine,2013,World League
+Erik Shoji,L,Honolulu,HI,Stanford,2013,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2013,World League
+David Lee,MB,Alpine,CA,Long Beach State,2013,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2013,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2013,World League
+Murphy Troy,Opp,St. Louis,MO,USC,2013,World League
+Tony Ciarelli,OH,Huntington Beach,CA,USC,2013,World League
+Brian Thornton,S,San Clemente,CA,UC Irvine,2013,World League
+Matt Rawson,MB,Westchester,CA,Hawai'i,2013,World League
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2013,World League
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2013,World League
+David Smith,MB,Saugus,CA,UC Irvine,2013,World League
+Erik Shoji,L,Honolulu,HI,Stanford,2013,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2013,World League
+Jeff Menzel,OH,Santa Barbara,CA,UC Santa Barbara,2013,World League
+Evan Patak,Opp,Pleasanton,CA,UC Santa Barbara,2013,World League
+David Lee,MB,Alpine,CA,Long Beach State,2013,World League
+Rich Lambourne,L,Tustin,CA,BYU,2013,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2013,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2013,World League
+Kyle Caldwell,S,Newport Beach,CA,UCLA,2013,World League
+Murphy Troy,Opp,St. Louis,MO,USC,2013,World League
+Tony Ciarelli,OH,Huntington Beach,CA,USC,2013,World League
+Brian Thornton,S,San Clemente,CA,UC Irvine,2013,World League
+Russell Holmes,MB,Fountain Valley,CA,BYU,2013,World League
+Matt Rawson,MB,Los Angeles,CA,Hawai'i,2013,World League
+Ryan Ammerman,S,Parker,CO,UC Irvine,2013,World League
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2013,World League
+Jayson Jablonsky,OH,Yorba Linda,CA,UC Irvine,2013,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2013,World League
+Garrett Muagututia,OH,Oceanside,CA,UCLA,2013,World League
+Alfee Reft,L,Oxnard,CA,Hawai'i,2013,World League
+David Smith,MB,Saugus,CA,UC Irvine,2013,World League
+Brad Lawson,OH,Honolulu,HI,Stanford,2013,World League
+Erik Shoji,L,Honolulu,HI,Stanford,2013,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2012,Olympic Qualification Tournament
+David Lee,MB,Alpine,CA,Long Beach State,2012,Olympic Qualification Tournament
+Rich Lambourne,L,Tustin,CA,BYU,2012,Olympic Qualification Tournament
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2012,Olympic Qualification Tournament
+Donald Suxho,S,Korce,Albania,USC,2012,Olympic Qualification Tournament
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2012,Olympic Qualification Tournament
+Ryan Millar,MB,Alpine,UT,BYU,2012,Olympic Qualification Tournament
+Riley Salmon,OH,League City,TX,Pierce College,2012,Olympic Qualification Tournament
+Brian Thornton,S,San Clemente,CA,UC Irvine,2012,Olympic Qualification Tournament
+Russell Holmes,MB,Fountain Valley,CA,BYU,2012,Olympic Qualification Tournament
+Clay Stanley,Opp,Honolulu,HI,Hawai'i,2012,Olympic Qualification Tournament
+David McKienzie,Opp,Littleton,CO,Long Beach State,2012,Olympic Qualification Tournament
+Matthew Anderson,OH,West Seneca,NY,Penn State,2012,World League
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2012,World League
+Evan Patak,Opp,Pleasanton,CA,UC Santa Barbara,2012,World League
+David Lee,MB,Alpine,CA,Long Beach State,2012,World League
+Rich Lambourne,L,Tustin,CA,BYU,2012,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2012,World League
+Donald Suxho,S,Korce,Albania,USC,2012,World League
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2012,World League
+Ryan Millar,MB,Alpine,UT,BYU,2012,World League
+Riley Salmon,L,League City,TX,Pierce College,2012,World League
+Brian Thornton,S,San Clemente,CA,UC Irvine,2012,World League
+Russell Holmes,MB,Fountain Valley,CA,BYU,2012,World League
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2012,World League
+Kevin Hansen,S,Newport Beach,CA,Stanford,2012,World League
+Gabe Gardner,Opp,San Clemente,CA,Stanford,2012,World League
+Jayson Jablonsky,OH,Yorba Linda,CA,UC Irvine,2012,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2012,World League
+Scott Touzinsky,OH,St. Louis,MO,Long Beach State,2012,World League
+Robert Tarr,OH,Cape Canaveral,FL,Long Beach State,2012,World League
+David Smith,MB,Saugus,CA,UC Irvine,2012,World League
+David McKienzie,Opp,Littleton,CO,Long Beach State,2012,World League
+Taylor Sander,OH,Huntington Beach,CA,BYU,2012,World League
+Jeff Menzel,OH,Santa Barbara,CA,UC Santa Barbara,2012,World League
+Kawika Shoji,S,Honolulu,HI,Stanford,2012,World League
+Jonathan Winder,S,Irvine,CA,Pepperdine,2012,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2012,World League
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2012,World League
+David Lee,MB,Alpine,CA,Long Beach State,2012,World League
+Rich Lambourne,L,Tustin,CA,BYU,2012,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2012,World League
+Donald Suxho,S,Korce,Albania,USC,2012,World League
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2012,World League
+Brian Thornton,S,San Clemente,CA,UC Irvine,2012,World League
+Russell Holmes,MB,Fountain Valley,CA,BYU,2012,World League
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2012,World League
+David Smith,MB,Saugus,CA,UC Irvine,2012,World League
+David McKienzie,Opp,Littleton,CO,Long Beach State,2012,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2012,Olympic Games
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2012,Olympic Games
+David Lee,MB,Alpine,CA,Long Beach State,2012,Olympic Games
+Rich Lambourne,L,Tustin,CA,BYU,2012,Olympic Games
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2012,Olympic Games
+Donald Suxho,S,Korce,Albania,USC,2012,Olympic Games
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2012,Olympic Games
+Brian Thornton,S,San Clemente,CA,UC Irvine,2012,Olympic Games
+Russell Holmes,MB,Fountain Valley,CA,BYU,2012,Olympic Games
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2012,Olympic Games
+David Smith,MB,Saugus,CA,UC Irvine,2012,Olympic Games
+David McKienzie,Opp,Littleton,CO,Long Beach State,2012,Olympic Games
+Evan Patak,Opp,Pleasanton,CA,UC Santa Barbara,2012,Olympic Games Alternates
+Ryan Millar,MB,Alpine,UT,BYU,2012,Olympic Games Alternates
+Riley Salmon,L,League City,TX,Pierce College,2012,Olympic Games Alternates
+Kevin Hansen,S,Newport Beach,CA,Stanford,2012,Olympic Games Alternates
+Gabe Gardner,Opp,San Clemente,CA,Stanford,2012,Olympic Games Alternates
+Jayson Jablonsky,OH,Yorba Linda,CA,UC Irvine,2012,Olympic Games Alternates
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2012,Olympic Games Alternates
+Jonathan Winder,S,Irvine,CA,Pepperdine,2012,Olympic Games Alternates
+Matthew Anderson,OH,West Seneca,NY,Penn State,2011,World League
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2011,World League
+Evan Patak,Opp,Pleasanton,CA,UC Santa Barbara,2011,World League
+David Lee,MB,Alpine,CA,Long Beach State,2011,World League
+Rich Lambourne,L,Tustin,CA,BYU,2011,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2011,World League
+Donald Suxho,S,Korce,Albania,USC,2011,World League
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2011,World League
+Ryan Millar,MB,Alpine,UT,BYU,2011,World League
+Brian Thornton,S,San Clemente,CA,UC Irvine,2011,World League
+Jonathan Winder,S,Irvine,CA,Pepperdine,2011,World League
+Russell Holmes,MB,Fountain Valley,CA,BYU,2011,World League
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2011,World League
+Kevin Hansen,S,Newport Beach,CA,Stanford,2011,World League
+Gabe Gardner,Opp,San Clemente,CA,Stanford,2011,World League
+Jayson Jablonsky,OH,Yorba Linda,CA,UC Irvine,2011,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2011,World League
+Scott Touzinsky,OH,St. Louis,MO,Long Beach State,2011,World League
+Robert Tarr,OH,Cape Canaveral,FL,Long Beach State,2011,World League
+David Smith,MB,Saugus,CA,UC Irvine,2011,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2011,World Cup
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2011,World Cup
+Evan Patak,Opp,Pleasanton,CA,UC Santa Barbara,2011,World Cup
+David Lee,MB,Alpine,CA,Long Beach State,2011,World Cup
+Rich Lambourne,L,Tustin,CA,BYU,2011,World Cup
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2011,World Cup
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2011,World Cup
+Ryan Millar,MB,Alpine,UT,BYU,2011,World Cup
+Riley Salmon,L,League City,TX,Pierce College,2011,World Cup
+Russell Holmes,MB,Fountain Valley,CA,BYU,2011,World Cup
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2011,World Cup
+Kevin Hansen,S,Newport Beach,CA,Stanford,2011,World Cup
+Brian Thornton,S,San Clemente,CA,UC Irvine,2011,World Cup
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2011,World Cup
+Matthew Anderson,OH,West Seneca,NY,Penn State,2010,World League
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2010,World League
+Evan Patak,Opp,Pleasanton,CA,UC Santa Barbara,2010,World League
+David Lee,MB,Alpine,CA,Long Beach State,2010,World League
+Rich Lambourne,L,Tustin,CA,BYU,2010,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2010,World League
+Donald Suxho,S,Korce,Albania,USC,2010,World League
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2010,World League
+Ryan Millar,MB,Alpine,UT,BYU,2010,World League
+Riley Salmon,OH,League City,TX,Pierce College,2010,World League
+Tyler Hildebrand,S,Mesa,AZ,Long Beach State,2010,World League
+Jayson Jablonsky,OH,Yorba Linda,CA,UC Irvine,2010,World League
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2010,World League
+Kevin Hansen,S,Newport Beach,CA,Stanford,2010,World League
+Russell Holmes,MB,Fountain Valley,CA,BYU,2010,World League
+Andrew Hein,MB,Carol Stream,IL,Pepperdine,2010,World League
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2010,World League
+Scott Touzinsky,OH,St. Louis,MO,Long Beach State,2010,World League
+Alfee Reft,L,Oxnard,CA,Hawai'i,2010,World League
+Matthew Anderson,OH,West Seneca,NY,Penn State,2010,World Championship
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2010,World Championship
+Evan Patak,Opp,Pleasanton,CA,UC Santa Barbara,2010,World Championship
+David Lee,MB,Alpine,CA,Long Beach State,2010,World Championship
+Rich Lambourne,L,Tustin,CA,BYU,2010,World Championship
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2010,World Championship
+Jonathan Winder,S,Irvine,CA,Pepperdine,2010,World Championship
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2010,World Championship
+Ryan Millar,MB,Alpine,UT,BYU,2010,World Championship
+Riley Salmon,OH,League City,TX,Pierce College,2010,World Championship
+Tyler Hildebrand,S,Mesa,AZ,Long Beach State,2010,World Championship
+Jayson Jablonsky,OH,Yorba Linda,CA,UC Irvine,2010,World Championship
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2010,World Championship
+Kevin Hansen,S,Newport Beach,CA,Stanford,2010,World Championship
+Russell Holmes,MB,Fountain Valley,CA,BYU,2010,World Championship
+Carson Clark,Opp,Santa Barbara,CA,UC Irvine,2010,World Championship
+Maxwell Holt,MB,Cincinnati,OH,Penn State,2010,World Championship
+Scott Touzinsky,OH,St. Louis,MO,Long Beach State,2010,World Championship
+Alfee Reft,L,Oxnard,CA,Hawai'i,2010,World Championship
+Matthew Anderson,OH,West Seneca,NY,Penn State,2009,World League
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2009,World League
+Evan Patak,Opp,Pleasanton,CA,UC Santa Barbara,2009,World League
+David Lee,MB,Alpine,CA,Long Beach State,2009,World League
+Rich Lambourne,L,Tustin,CA,BYU,2009,World League
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2009,World League
+Donald Suxho,S,Korce,Albania,USC,2009,World League
+Andrew Hein,MB,Carol Stream,IL,Pepperdine,2009,World League
+Jonathan Winder,S,Irvine,CA,Pepperdine,2009,World League
+Riley Salmon,OH,League City,TX,Pierce College,2009,World League
+Brook Billings,Opp,Santa Barbara,CA,USC,2009,World League
+Tom Hoff,MB,Park Ridge,IL,Long Beach State,2009,World League
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2009,World League
+Kevin Hansen,S,Newport Beach,CA,Stanford,2009,World League
+Russell Holmes,MB,Fountain Valley,CA,BYU,2009,World League
+Jayson Jablonsky,OH,Yorba Linda,CA,UC Irvine,2009,World League
+Delano Thomas,MB,Sacramento,CA,Hawai'i,2009,World League
+Scott Touzinsky,OH,St. Louis,MO,Long Beach State,2009,World League
+Alfee Reft,L,Oxnard,CA,Hawai'i,2009,World League
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2009,World Championship Qualifier
+Evan Patak,Opp,Pleasanton,CA,UC Santa Barbara,2009,World Championship Qualifier
+David Lee,MB,Alpine,CA,Long Beach State,2009,World Championship Qualifier
+Rich Lambourne,L,Tustin,CA,BYU,2009,World Championship Qualifier
+Paul Lotman,OH,Lakewood,CA,Long Beach State,2009,World Championship Qualifier
+Donald Suxho,S,Korce,Albania,USC,2009,World Championship Qualifier
+Andrew Hein,MB,Carol Stream,IL,Pepperdine,2009,World Championship Qualifier
+David Smith,MB,Saugus,CA,UC Irvine,2009,World Championship Qualifier
+Clay Stanley,Opp,Honolulu,HI,Hawai'i,2009,World Championship Qualifier
+Kevin Hansen,S,Newport Beach,CA,Stanford,2009,World Championship Qualifier
+Jayson Jablonsky,OH,Yorba Linda,CA,UC Irvine,2009,World Championship Qualifier
+Scott Touzinsky,OH,St. Louis,MO,Long Beach State,2009,World Championship Qualifier
+Lloy Ball,S,Woodburn,IN,IPFW,2008,Olympic Qualifying Tournament
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2008,Olympic Qualifying Tournament
+David Lee,MB,Alpine,CA,Long Beach State,2008,Olympic Qualifying Tournament
+Rich Lambourne,L,Tustin,CA,BYU,2008,Olympic Qualifying Tournament
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2008,Olympic Qualifying Tournament
+Ryan Millar,MB,Palmdale,CA,BYU,2008,Olympic Qualifying Tournament
+Riley Salmon,OH,League City,TX,Pierce College,2008,Olympic Qualifying Tournament
+Tom Hoff,MB,Park Ridge,IL,Long Beach State,2008,Olympic Qualifying Tournament
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2008,Olympic Qualifying Tournament
+Kevin Hansen,S,Newport Beach,CA,Stanford,2008,Olympic Qualifying Tournament
+Gabe Gardner,OH,San Clemente,CA,Stanford,2008,Olympic Qualifying Tournament
+Scott Touzinsky,OH,St. Louis,MO,Long Beach State,2008,Olympic Qualifying Tournament
+Lloy Ball,S,Woodburn,IN,IPFW,2008,World League
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2008,World League
+Evan Patak,Opp,Pleasanton,CA,UC Santa Barbara,2008,World League
+David Lee,MB,Alpine,CA,Long Beach State,2008,World League
+Rich Lambourne,L,Tustin,CA,BYU,2008,World League
+Phil Eatherton,MB,Glencoe,MO,Ball State,2008,World League
+Donald Suxho,S,Korce,Albania,USC,2008,World League
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2008,World League
+Ryan Millar,MB,Palmdale,CA,BYU,2008,World League
+Riley Salmon,OH,League City,TX,Pierce College,2008,World League
+Brook Billings,Opp,Santa Barbara,CA,USC,2008,World League
+Tom Hoff,MB,Park Ridge,IL,Long Beach State,2008,World League
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2008,World League
+Kevin Hansen,S,Newport Beach,CA,Stanford,2008,World League
+Gabe Gardner,Opp,San Clemente,CA,Stanford,2008,World League
+Brandon Taliaferro,S,San Clemente,CA,UCLA,2008,World League
+Delano Thomas,MB,Sacramento,CA,Hawai'i,2008,World League
+Scott Touzinsky,OH,St. Louis,MO,Long Beach State,2008,World League
+Alfee Reft,L,Oxnard,CA,Hawai'i,2008,World League
+Lloy Ball,S,Woodburn,IN,IPFW,2007,World League
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2007,World League
+Jim Polster,OH,Laguna Niguel,CA,Long Beach State,2007,World League
+Brandon Taliaferro,S,San Clemente,CA,UCLA,2007,World League
+Rich Lambourne,L,Tustin,CA,BYU,2007,World League
+Phil Eatherton,MB,Glencoe,MO,Ball State,2007,World League
+David Lee,MB,Alpine,CA,Long Beach State,2007,World League
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2007,World League
+Ryan Millar,MB,Palmdale,CA,BYU,2007,World League
+Riley Salmon,OH,League City,TX,Pierce College,2007,World League
+Brook Billings,OPP,Santa Barbara,CA,USC,2007,World League
+Tom Hoff,MB,Park Ridge,IL,Long Beach State,2007,World League
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2007,World League
+Kevin Hansen,S,Newport Beach,CA,Stanford,2007,World League
+Gabe Gardner,OH,San Clemente,CA,Stanford,2007,World League
+David McKienzie,OPP,Littleton,CO,Long Beach State,2007,World League
+Delano Thomas,MB,Sacramento,CA,Hawai'i,2007,World League
+Nils Nielsen,OH,Fallbrook,CA,Cal State Northridge,2007,World League
+Alfee Reft,L,Oxnard,CA,Hawai'i,2007,World League
+Lloy Ball,S,Woodburn,IN,IPFW,2007,World Cup
+Sean Rooney,OH,Wheaton,IL,Pepperdine,2007,World Cup
+Jim Polster,OH,Laguna Niguel,CA,Long Beach State,2007,World Cup
+David Lee,MB,Alpine,CA,Long Beach State,2007,World Cup
+Rich Lambourne,L,Tustin,CA,BYU,2007,World Cup
+Phil Eatherton,MB,Glencoe,MO,Ball State,2007,World Cup
+Donald Suxho,S,Korce,Albania,USC,2007,World Cup
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2007,World Cup
+Ryan Millar,MB,Palmdale,CA,BYU,2007,World Cup
+Riley Salmon,OH,League City,TX,Pierce College,2007,World Cup
+Brook Billings,OPP,Santa Barbara,CA,USC,2007,World Cup
+Tom Hoff,MB,Park Ridge,IL,Long Beach State,2007,World Cup
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2007,World Cup
+Kevin Hansen,S,Newport Beach,CA,Stanford,2007,World Cup
+Gabe Gardner,OH,San Clemente,CA,Stanford,2007,World Cup
+Brandon Taliaferro,S,San Clemente,CA,UCLA,2007,World Cup
+Delano Thomas,MB,Sacramento,CA,Hawai'i,2007,World Cup
+Scott Touzinsky,OH,St. Louis,MO,Long Beach State,2007,World Cup
+Alfee Reft,L,Oxnard,CA,Hawai'i,2007,World Cup
+David Lee,MB,Alpine,CA,Long Beach State,2006,World League
+Pieter Olree,OH,Reading,PA,Ohio State,2006,World League
+Jim Polster,OH,Laguna Niguel,CA,Long Beach State,2006,World League
+Chris Tamas,S,Santa Barbara,CA,Pacific,2006,World League
+Rich Lambourne,L,Tustin,CA,BYU,2006,World League
+Phil Eatherton,MB,Glencoe,MO,Ball State,2006,World League
+Donald Suxho,S,Korce,Albania,USC,2006,World League
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2006,World League
+Ryan Millar,MB,Palmdale,CA,BYU,2006,World League
+Riley Salmon,OH,League City,TX,Pierce College,2006,World League
+Brook Billings,OPP,Santa Barbara,CA,USC,2006,World League
+Tom Hoff,MB,Park Ridge,IL,Long Beach State,2006,World League
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2006,World League
+Kevin Hansen,S,Newport Beach,CA,Stanford,2006,World League
+Gabe Gardner,OH,San Clemente,CA,Stanford,2006,World League
+David McKienzie,OPP,Littleton,CO,Long Beach State,2006,World League
+Delano Thomas,MB,Sacramento,CA,Hawai'i,2006,World League
+Paul Munoz,L,Huntington Beach,CA,Long Beach State,2006,World League
+Jim Polster,OH,Laguna Niguel,CA,Long Beach State,2006,World Championship
+Rich Lambourne,L,Tustin,CA,BYU,2006,World Championship
+Phil Eatherton,MB,Glencoe,MO,Ball State,2006,World Championship
+Donald Suxho,S,Korce,Albania,USC,2006,World Championship
+Reid Priddy,OH,Richmond,VA,Loyola Marymount,2006,World Championship
+Ryan Millar,MB,Palmdale,CA,BYU,2006,World Championship
+Riley Salmon,OH,League City,TX,Pierce College,2006,World Championship
+Tom Hoff,MB,Park Ridge,IL,Long Beach State,2006,World Championship
+Clay Stanley,OPP,Honolulu,HI,Hawai'i,2006,World Championship
+Gabe Gardner,OH,San Clemente,CA,Stanford,2006,World Championship
+David McKienzie,OPP,Littleton,CO,Long Beach State,2006,World Championship
+Brandon Taliaferro,S,San Clemente,CA,UCLA,2006,World Championship
