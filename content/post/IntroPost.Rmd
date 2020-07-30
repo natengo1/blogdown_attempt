@@ -3,7 +3,7 @@ title: "Strange Times | #savestanfordmvb"
 author: "Nate Ngo"
 date: 2020-07-30
 categories: ["R"]
-tags: ["ggplot2", "tidyverse","#savestanfordmvb"]
+tags: ["ggplot2", "tidyverse","savestanfordmvb"]
 ---
 
 # Welcome! 
