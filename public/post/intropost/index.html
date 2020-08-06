@@ -130,7 +130,7 @@
 
 <a href="/tags/tidyverse"><kbd class="item-tag">tidyverse</kbd></a>
 
-<a href="/tags/#savestanfordmvb"><kbd class="item-tag">#savestanfordmvb</kbd></a>
+<a href="/tags/savestanfordmvb"><kbd class="item-tag">savestanfordmvb</kbd></a>
 
 
     </div>
@@ -141,15 +141,15 @@
 <div id="welcome" class="section level1">
 <h1>Welcome!</h1>
 <p>First of all, thanks for stopping by. My hope is to post here on a somewhat regular basis, but I can’t make any promises. I guess you’ll just have to keep checking back for updates. Second, I hope you’re doing alright in these strange, coronavirus times.</p>
-<p>I decided to start this blog for a number of reasons, the most personal of which is to start a journey to the <a href="https://thelearnerlab.com/kinda-good-island/">“Kinda Good Island”</a> (in the words of <a href="thelearnerlab.com">Learner Lab</a> founder <a href="twitter.com">Trevor Ragan</a>) of writing/blogging/putting ideas out in the open. I’m starting neck deep in the “Feeling Weird Swamp” portion of this path, but I’ve been hiding behind fear and inaction for too long.</p>
+<p>I decided to start this blog for a number of reasons, the most personal of which is to start a journey to the <a href="https://thelearnerlab.com/kinda-good-island/">“Kinda Good Island”</a> (in the words of <a href="thelearnerlab.com">Learner Lab</a> founder <a href="twitter.com/learnerlab/">Trevor Ragan</a>) of writing/blogging/putting ideas out in the open. I’m starting neck deep in the “Feeling Weird Swamp” portion of this path, but I’ve been hiding behind fear and inaction for too long.</p>
 <p>With that said, let’s get into this first post!</p>
 </div>
 <div id="savestanfordmvb" class="section level1">
 <h1><a href="https://www.change.org/p/stanford-university-reinstate-the-stanford-men-s-volleyball-program?utm_content=cl_sharecopy_23354124_en-US%3A4&amp;recruiter=1129383434&amp;utm_source=share_petition&amp;utm_medium=copylink&amp;utm_campaign=share_petition">#savestanfordmvb</a></h1>
-<p>In the midst of all the unfortunate happenings in and out of the volleyball world, Stanford’s athletics department <a href="https://www.stanforddaily.com/2020/07/13/sports-game-point-1/">announcing they will be dropping their Men’s Volleyball program after the 2020-21 season</a> is certainly a heavy blow. Going to watch high level volleyball matches at Stanford (both men’s and women’s) further stoked my attachment to this sport, which has led me to where I am today. Today’s post will take a look at Stanford Men’s Volleyball Program’s contribution to the USA Men’s National Team roster since 2006 (when the USA men began regularly competing in the FIVB World League).</p>
+<p>In the midst of all the unfortunate happenings in and out of the volleyball world, Stanford’s athletics department <a href="https://www.stanforddaily.com/2020/07/13/sports-game-point-1/">announcing they will be dropping their Men’s Volleyball program after the 2020-21 season</a> is certainly a heavy blow for us in the sport. Going to watch high level volleyball matches at Stanford (both men’s and women’s) further stoked my attachment to this sport during high school, which has led me to where I am today. Today’s post will take a look at Stanford Men’s Volleyball Program’s contribution to the USA Men’s National Team (MNT) roster since 2006 (when the USA men began regularly competing in the FIVB World League).</p>
 <div id="the-data" class="section level2">
 <h2>The Data</h2>
-<p>I pulled data from the <a href="https://www.teamusa.org/usa-volleyball/usa-teams/indoor-volleyball/men/rosters">USA Volleyball</a> website which includes historical rosters back to 2003 for the MNT. I took travel rosters for FIVB senior level events: World League, Volleyball Nations League, Grand Champions Cup, World Championships, World Cup, and the Olympic Games, including alternates. I did this manually by copying and pasting each roster then cleaning the data up within Excel (still have a lot to learn about web scraping!).</p>
+<p>I pulled data from the <a href="https://www.teamusa.org/usa-volleyball/usa-teams/indoor-volleyball/men/rosters">USA Volleyball</a> website which includes historical rosters back to 2003 for the MNT. I took travel rosters for FIVB senior level events: World League, Volleyball Nations League, Grand Champions Cup, World Championships, World Cup, and the Olympic Games, including alternates. I did this manually by copying and pasting each roster then cleaning the data up within Excel (I still have a lot to learn about web scraping!).</p>
 <p>Once I have the data in a tidy format (each column is a variable, each row is an observation), I read the data into R using the <code>readr</code> package from <code>tidyverse</code>.</p>
 <pre class="r"><code># load packages for reading (readr), wrangling (dplyr, tidyr, purrr), and visualizing (ggplot2)
 library(tidyverse)
@@ -269,6 +269,32 @@ ggplot(college,
     
     
     
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/techacademy/">USA Volleyball Tech Academy</a></h4>
+    <h5>August 5, 2020</h5>
+    
+<a href="/tags/ggplot2"><kbd class="item-tag">ggplot2</kbd></a>
+
+<a href="/tags/tidyverse"><kbd class="item-tag">tidyverse</kbd></a>
+
+<a href="/tags/usavolleyball"><kbd class="item-tag">usavolleyball</kbd></a>
+
+<a href="/tags/cal-poly"><kbd class="item-tag">cal poly</kbd></a>
+
+
+
+</div>
+ 
+    
 
     
     
@@ -286,7 +312,7 @@ ggplot(college,
             return;
         }
         var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "natengo1" + '.disqus.com/embed.js';
+        s.src = '//' + "Nate" + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();

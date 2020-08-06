@@ -6,10 +6,19 @@
     <description>Recent content in R on Volley Visualization</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>USA Volleyball Tech Academy</title>
+      <link>/post/techacademy/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/techacademy/</guid>
+      <description>USAV Tech AcademyIn case you haven’t heard, for the last three days, USA Volleyball hosted a series of webinars geared towards the data/analytics/technology side of the game which we called the USAV Tech Academy. I, alongside a number of people I feel fortunate to call friends and colleagues, presented and spoke on a range of topics in this realm. If you’re interested in listening to these presentations, you can register ($20 cost) through the previous link and you’ll have access through the end of 2020.</description>
+    </item>
     
     <item>
       <title>Strange Times | #savestanfordmvb</title>
