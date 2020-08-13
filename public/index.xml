@@ -6,10 +6,19 @@
     <description>Recent content on Volley Visualization</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>High School Boys&#39; Volleyball</title>
+      <link>/post/hsboysvb/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hsboysvb/</guid>
+      <description>Growth of High School Boys’ VolleyballAfter my first post about #savestanfordmvb, naturally I wanted to look at trends in participation for high school boys’ volleyball. My first stop in looking at this particular topic was the First Point Volleyball Foundation website. First Point was started by my boss, USA MNT and UCLA Men’s Volleyball head coach, John Speraw and is committed to growing boys’ and men’s volleyball in the US by assisting in the creation and development of high school and college programs.</description>
+    </item>
     
     <item>
       <title>USA Volleyball Tech Academy</title>
@@ -37,6 +46,21 @@ I decided to start this blog for a number of reasons, the most personal of which
       
       <guid>/about/</guid>
       <description>Welcome! My name is Nate Ngo and I am currently the performance analyst for the USA Men&amp;rsquo;s Indoor National Volleyball Team where I handle video and data analysis. I have been learning and implementing the statistical programming language R since 2016, and am a strong advocate for its use in how we analyze and present information within the sport. In sharing some of my thoughts, processes, and code through this site, I hope to inspire future analysts in the sport of volleyball, and future fans from the data world (and beyond!</description>
+    </item>
+    
+    <item>
+      <title>Resources &amp; More</title>
+      <link>/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/resources/</guid>
+      <description>Data Science + Volleyball openvolley + Ben Raymond
+Rethinking Volley + Chad Gordon
+Eduardo Coaches + Eduardo Fiallos
+Data Science + Other Sports Measureables Podcast + Brendan Kent
+Expected Value Podcast + Paul Carr
+Data Science R for Data Science + Hadley Wickham
+Julia Silge</description>
     </item>
     
   </channel>
