@@ -1,0 +1,456 @@
+---
+title: Expected Kills
+author: "Nate Ngo"
+date: 2020-08-28
+categories: ["R"]
+tags: ["ggplot2", "tidyverse","tidymodels","xK","expected kills"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning=FALSE,
+                      message=FALSE,
+                      out.width = "100%")
+```
+
+# Expected Kills (xK)
+
+Over the course of this quarantine period, I have been trying to learn (relearn?) more about statistical models, machine learning, how other sports are utilizing these concepts, and how to apply that to volleyball. Well, I finally had a breakthrough after weeks of going through [Tidymodels](https://www.tidymodels.org/) examples found on [Julia Silge’s site](https://juliasilge.com/), all the [#TidyTuesday](https://twitter.com/search?q=%23TidyTuesday&src=typeahead_click) posts on Twitter, conversations with [Steve Aronson](https://github.com/stevearonson) and [Chad Gordon](https://volleydork.blog/), video tutorials by [David Robinson](https://www.youtube.com/user/safe4democracy) and [Andrew Couch](https://www.youtube.com/user/asianlongboarder), and this [blog post](https://www.datofutbol.cl/xg-model/) by [Ismael Gomez](https://twitter.com/ismaelgomezs) about fitting an Expected Goals (xG) model (for football/soccer). The latter has been one of my major motivating factors in this learning process, in hopes to adapt the concept to our sport. With that said, let’s take a look at this process of building a model, and some initial looks at how to use it.
+
+## The Data
+
+To illustrate this example, we’ll take a look at an Olympic Qualifier match between Netherlands and Belgium from 2019, using the Data Volley file (.dvw) to pull event level data from, and is available on my [GitHub](https://github.com/natengo1). The data used to fit the model is not publicly available as some of it is pulled from [VolleyMetrics](https://www.hudl.com/products/volleymetrics), and edited with the help of David Dantes, Jon Parry, Brian Failinger, Maggie Eppright, and Andrew Strick. 
+
+```{r eval=FALSE}
+
+# load necessary packages
+
+library(tidyverse)    # data manipulation and plotting
+library(datavolley)   # working with .dvw files from Data Volley
+library(intrval)      # use of `%ni` function, opposite of %in%
+library(tidymodels)   # building statistical models
+
+# load data for model
+data0 <- readRDS("~/data0_xK.RDS")
+
+# this is where you'll need your own data for fitting the model
+# I'll be working with Data Volley Files and using Ben Raymond's {datavolley} package
+# to load those files into a data frame to work with
+
+```
+
+```{r echo=FALSE, include=FALSE}
+
+# load necessary packages
+
+library(tidyverse)    # data manipulation and plotting
+library(datavolley)   # working with .dvw files from Data Volley
+library(intrval)      # use of `%ni` function, opposite of %in%
+library(tidymodels)   # building statistical models
+
+# load data
+data0 <- readRDS("C:/Users/NathanielNgo/Documents/data0_xK.RDS")
+
+```
+
+Now, `data0` is a data frame containing a large sample of matches I will be using to train and test the model, and `data_pred` is a data frame containing the event data from the Netherlands-Belgium match mentioned before.
+
+## The Model
+
+In general, the Expected Goals (xG) model looks to quantify the quality of a shot taken in football, often measured as the probability a shot becomes a goal. Most xG models that I've come across include x-y coordinate data of where the shot was taken from and visible shot angle at a minimum, while many others include other features such as time of play, left foot/right foot/head/body, shot from counterattack, etc. dependent upon the data available.
+
+The following model will attempt to do something similar for volleyball - namely quantifying the probability that an attack results in a kill (hence, Expected Kills or xK). The model will use the following factors to predict the probability of a kill:
+
+- Set location (x-y coordinate)
+- Attack Type
+  - Middle Quick Attacks
+  - All other In System Pin Attacks
+  - High ball Out of System Attacks
+- Rally Phase
+  - Attack After Reception (or First Ball Side Out/FBSO)
+  - Attack After Dig Transition
+  - Attack After Free Ball Transition
+- Quick Attack Availability
+  - Middle Quick Attack is a Viable Option
+  - Middle Quick Attack is not a viable option
+
+To keep things simple, I will limit the prediction to Kill/No Kill and not be concerned with predicting errors. My main interest here is assessing the quality of the situation prior to the attack attempt.
+
+First, let's tidy up the data we'll use to fit the model. I personally am more comfortable with the coordinate system Data Volley uses, and so I will convert `start_coordinate_x` and `start_coordinate_y` into the integer values that Data Volley provides and store those into `x1` and `y1`, respectively.
+
+Next, we want to link the set location coordinates to the attack, and assuming the set code directly precedes the attack, use the `shift` function from {`binhf`} to store a version of the coordinate columns, but shifted one row back (in the case of the `shift` function, `right`) in `prev1x1` and `prev1y1`. 
+
+We'll create two more columns in a similar manner so that we can filter for attacks that succeed a set using `prev1skill`, and determine the type of first contact that precedes the set with `prev2skill`. 
+
+`prev1set_code` will help us determine whether the Middle was a viable attack option or not based on the Setter Call code from Data Volley.
+
+
+```{r}
+
+# create columns to identify features to be used in the model
+
+data0 <- data0 %>%
+  dplyr::mutate(x1 = round(26.66666*start_coordinate_x - 2.83333333,0),
+                y1 = round(13.5*start_coordinate_y + 2.75,0),
+                prev1x1 = binhf::shift(x1,1,"right"),
+                prev1y1 = binhf::shift(y1,1,"right"),
+                prev1skill = binhf::shift(skill,1,"right"),
+                prev2skill = binhf::shift(skill,2,"right"),
+                prev1set_code = binhf::shift(set_code,1,"right"))
+
+```
+
+Now, we'll clean up the variable names and values, turn the non-numeric variables into factors, and filter the data down into a data frame with just the variables we want for fitting the model.
+
+```{r}
+
+attack <- data0 %>%
+  dplyr::filter(sk == 4 & !is.na(prev1x1) & !is.na(prev1y1) &       # attacks with set locations
+                  skill_type != "Other attack" &                    # remove over pass attacks
+                  prev1skill == "Set" & 
+                  prev2skill %in% c("Reception","Dig","Freeball")) %>%
+  dplyr::mutate(result = ifelse(evaluation_code == "#","kill","other"),
+                result = factor(result),
+                attacktype = case_when(skill_type == "High ball attack" ~ "OS",
+                                       skill_type == "Quick ball attack" ~ "Q",
+                                       TRUE ~ "IS"),
+                attacktype = factor(attacktype),
+                attack_subtype = case_when(skill_subtype == "Hard spike" ~ "H",
+                                           skill_subtype == "Soft spike/topspin" ~ "P",
+                                           skill_subtype == "Tip" ~ "T",
+                                           TRUE ~ "T"),
+                attack_subtype = factor(attack_subtype),
+                phase = case_when(prev2skill == "Reception" ~ "Reception",
+                                  prev2skill == "Dig" ~ "DigTransition",
+                                  prev2skill == "Freeball" ~ "FreeBall",
+                                  TRUE ~ "other"),
+                phase = factor(phase),
+                q_available = case_when(prev1set_code %in% c("KF","KG","KP","KB","KS","KC") ~ "Yes",
+                                        prev1set_code == "KO" ~ "No",
+                                        is.na(prev1set_code) ~ "No",  # ^ my codes for Setter Calls..
+                                        TRUE ~ "No"),                 # change these out for your own
+                q_available = factor(q_available)) %>%
+  dplyr::select(result,prev1x1,prev1y1,attacktype,q_available,phase)
+
+
+head(attack)
+
+```
+
+Our data is prepped! Time to build a model! For the following section, I followed along Julia Silge's post on [getting started with Tidymodels](https://juliasilge.com/blog/palmer-penguins/) to build a Random Forest model. In her post, Julia Silge builds both a Logistic Regression model and a Random Forest model. I chose to focus solely on the Random Forest model as there are less restrictions on the distribution of our data. Check out [StatQuest](https://www.youtube.com/user/joshstarmer) by Josh Starmer for a great resource for learning more about statistical concepts and modelling.
+
+First, we'll split our data set into a training set and a testing set. We'll use the [{`rsample`}](https://rsample.tidymodels.org/) (loaded from {`tidymodels`}) to achieve this.
+
+```{r}
+
+# set a seed for R's randon number generator for reproducibility
+set.seed(123)
+
+# split the data - initial_split defaults to 3/4 to training data, 1/4 to testing data
+attack_split <- rsample::initial_split(attack, strata = result)
+attack_train <- rsample::training(attack_split)
+attack_test <- rsample::testing(attack_split)
+
+```
+
+Next we'll create bootstrap samples of the training data using the `bootstraps` function also from the {`resample`} package. For a deeper dive into bootstrapping, check out this [StatQuest Video](https://www.youtube.com/watch?v=isEcgoCmlO0&feature=youtu.be). In essence, bootstrapping will help us evaluate the model we will fit.
+
+```{r}
+
+attack_boot <- rsample::bootstraps(attack_train)
+
+```
+
+Now we specify the (random forest) model using the functions below from the [{`parsnip`}](https://parsnip.tidymodels.org/) package.
+
+```{r}
+
+rf_spec <- parsnip::rand_forest() %>%        # specify random forest model
+  parsnip::set_mode("classification") %>%    # classify observations as kill/no kill
+  parsnip::set_engine("ranger")              # use {ranger} package to fit model
+
+rf_spec
+
+```
+
+We'll construct a tidymodels [`workflow`](https://workflows.tidymodels.org/) to put the pieces of the model together. 
+
+```{r}
+
+attack_wf <- workflows::workflow() %>%    # initiate workflow
+  workflows::add_formula(result ~ .)      # specify model formula - we are calling the
+                                          # model to predict `result` by all other variables
+attack_wf                                 # in the data we provide (`attack` data frame here)
+
+```
+
+We are finally ready to fit our model to the training dataset! We'll pipe the model we specified in the `rf_spec` object into the `attack_wf` workflow object above, then use the `fit_resamples` function from the [{`tune`}](https://tune.tidymodels.org/) package to fit the model to each of the bootstrapped resamples we created in `attack_boot`.
+
+```{r eval=FALSE}
+
+rf_rs <- attack_wf %>%
+  workflows::add_model(rf_spec) %>%
+  tune::fit_resamples(
+    resamples = attack_boot,
+    control = tune::control_resamples(save_pred = TRUE)   # save predictions from each 
+  )
+
+```
+
+```{r include=FALSE, echo=FALSE}
+
+# load model fitted to resamples
+rf_rs <- readRDS("C:/Users/NathanielNgo/Documents/rf_rs.RDS")
+
+```
+
+Our random forest model is fit to each of our resamples of our training dataset! Now let's evaluate how well the models performed. 
+
+```{r}
+
+tune::collect_metrics(rf_rs)
+
+```
+
+The average accuracy of the 25 models was 58.9% for correctly predicting whether an attack from the `attack_train` dataset was a kill or not. The `roc_auc` metric is used to compare model accuracy as well. More information on this metric can again be found on [StatQuest](https://www.youtube.com/watch?v=4jRBRDbJemM). We can also take a look at the confusion matrix to see the average number of prediction results across the resamples.
+
+```{r}
+
+rf_rs %>%
+  tune::conf_mat_resampled()
+
+```
+
+All in all, our model is not the most accurate, but provides a good starting point for building an Expected Kills model. 
+
+Let's fit the model again, this time using the training dataset, `attack_train`, to estimate the performance of the model on new data. 
+
+```{r eval=FALSE}
+
+attack_final <- attack_wf %>%
+  workflows::add_model(rf_spec) %>%
+  tune::last_fit(attack_split)    # fits the final best model of the training set
+                                  # and evaluate the test set
+```
+
+```{r include=FALSE, echo=FALSE}
+
+attack_final <- readRDS("C:/Users/NathanielNgo/Documents/attack_final.RDS")
+
+```
+
+Results of the final model:
+
+```{r}
+
+collect_metrics(attack_final)
+
+```
+
+```{r}
+
+collect_predictions(attack_final) %>%
+  conf_mat(result, .pred_class)
+
+```
+
+Pretty consistent with the models we fit on the training dataset. 
+
+We'll fit the model one last time, but now using the entirety of the data from `attack`, which we will then use to add predictions and probabilities to new match data.
+
+```{r}
+
+attack_model <- fit(attack_wf %>% add_model(rf_spec),
+                    data = attack)
+
+```
+
+## Expected Kills Use Case
+
+Now that we did all that work fitting the model, it's time to actually use it! We'll load in the Netherlands vs. Belgium Olympic Qualifier match from 2019 and show off a couple examples of how our model can be used. 
+
+```{r}
+
+# load data for prediction
+data_pred <- datavolley::read_dv("./&19 ioq b03 ned v bel.dvw",
+                                 insert_technical_timeouts = F) %>%
+  purrr::pluck(.,"plays")   # extract the `plays` data frame from the list of objects in data_pred
+
+```
+
+Let's prep the data like we did as we were building the model above. 
+
+```{r}
+
+data_pred <- data_pred %>%
+  dplyr::mutate(x1 = round(26.66666*start_coordinate_x - 2.83333333,0),
+                y1 = round(13.5*start_coordinate_y + 2.75,0),
+                prev1x1 = binhf::shift(x1,1,"right"),
+                prev1y1 = binhf::shift(y1,1,"right"),
+                prev1skill = binhf::shift(skill,1,"right"),
+                prev2skill = binhf::shift(skill,2,"right"),
+                prev1set_code = binhf::shift(set_code,1,"right"))
+
+```
+
+Then we'll filter out all attacks that have a set preceding them. 
+
+```{r}
+
+data_attack <- data_pred %>%
+  dplyr::filter(skill == "Attack" & !is.na(prev1x1) & !is.na(prev1y1) & 
+                  skill_type != "Other attack" &
+                  prev1skill == "Set" & 
+                  prev2skill %in% c("Reception","Dig","Freeball")) %>%
+  dplyr::mutate(result = ifelse(evaluation_code == "#","kill","other"),
+                result = factor(result),
+                attacktype = case_when(skill_type == "High ball attack" ~ "OS",
+                                       skill_type == "Quick ball attack" ~ "Q",
+                                       TRUE ~ "IS"),
+                attacktype = factor(attacktype),
+                phase = case_when(prev2skill == "Reception" ~ "Reception",
+                                  prev2skill == "Dig" ~ "DigTransition",
+                                  prev2skill == "Freeball" ~ "FreeBall",
+                                  TRUE ~ "other"),
+                phase = factor(phase),
+                q_available = case_when(prev1set_code %in% c("KF","KG","KP","KB","KS","KC") ~ "Yes",
+                                        is.na(prev1set_code) ~ "No",
+                                        TRUE ~ "No"),
+                q_available = factor(q_available))
+
+```
+
+When we were building the model, we selected only the relevant columns that we wanted to feed into the model. Here, we are leaving all variables as they are, and will append the predictions and probabilities from the model. 
+
+```{r}
+
+attack_pred <- stats::predict(attack_model,data_attack)                  # predict kill/no kill with model
+attack_prob <- stats::predict(attack_model,data_attack,type = "prob")    # probability of kill with model
+data_attack <- bind_cols(data_attack, attack_pred, attack_prob) %>%
+  dplyr::mutate(pred_correct = ifelse(result == .pred_class,"Correct","Incorrect"))
+
+```
+
+I added another variable `pred_correct` to show when the model predicted the result correctly or not.
+
+Here's where the rubber meets the road. Let's sum up all the probabilties for each attacker, what we'll call their Expected Kills (xK), and compare that to the actual number of kills they had. Again, we'll only consider attacks that were preceded by a set (i.e. no overpass kills) and that have a predicted value. 
+
+```{r}
+
+xKill <- data_attack %>%
+  dplyr::group_by(player_number,player_name,team_id) %>%
+  dplyr::summarise(xK = sum(.pred_kill),
+                   Kills = sum(skill == "Attack" & evaluation_code == "#"),
+                   n = n(),
+                   .groups = "drop") %>%
+  dplyr::arrange(team_id,desc(n))
+
+```
+
+```{r echo=FALSE}
+
+library(kableExtra)
+
+kableExtra::kable(xKill,
+                  linesep = "", 
+                  align = c("c","l","c","c","c")) %>%
+  kable_styling(latex_options = "striped")
+
+```
+
+It looks like Belgium's attackers' xK and actual kills in the match were pretty similar, whereas Netherlands had two attackers that well outperformed their xK in Nimir Abdel-Aziz and Maarten Van Garderen. Let's take a deeper look at these two attackers' attempts, as well as Thijs Ter Horst, who seemed to have underperformed in this match, relative to his xK. 
+
+First we'll look at Nimir Abdel-Aziz. Let's partition his attacks by whether or not the model's prediction was correct or not, and also by the type of attack. The Opposite finished the match with 19 kills on 12.6 xK.
+
+```{r echo=FALSE}
+
+ggplot(data_attack %>% filter(player_name == "Nimir Abdel-Aziz"),
+       aes(x = prev1x1,
+           y = prev1y1)) +
+  geom_segment(aes(x = 10,xend = 10,y = 10,yend = 50),size=.5) + #left sideline
+  geom_segment(aes(x = 10,xend = 90,y = 10,yend = 10),size=.5) + #endline
+  geom_segment(aes(x = 5,xend = 95,y = 50,yend = 50),size = 1) + #net
+  geom_segment(aes(x = 90,xend = 90,y = 10,yend = 50),size=.5) + #right sideline
+  geom_segment(aes(x = 10,xend = 90,y = 36.666,yend = 36.666),size=.5) + #3m line
+  geom_point(aes(color = result),
+             size = 3) +
+  scale_color_manual(values = c("kill" = "green",
+                                "other" = "gray")) +
+  facet_wrap(vars(fct_infreq(attack_description),pred_correct)) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(),
+        legend.position = "bottom",
+        axis.text = element_blank(),
+        axis.title = element_blank(),
+        aspect.ratio = 1) +
+  labs(color = "Attack Result",
+       title = "Nimir Abdel-Aziz",
+       subtitle = "19 Kills, 12.58 xK vs. BEL")
+
+```
+
+This seems to show a lower propensity for the model to predict kills for attacks beyond the attack line, particularly Out of System attacks. As such, Abdel-Aziz outperforms his xK value likely due to the high rate of kills he put away in Out of System situations (a really good performance on long way high balls to A2).
+
+Next we'll look at Maarten Van Garderen. The Outside Hitter had 11 kills on 6.97 xK for the match.
+
+```{r echo=FALSE}
+
+ggplot(data_attack %>% filter(player_name == "Maarten Van Garderen"),
+       aes(x = prev1x1,
+           y = prev1y1)) +
+  geom_segment(aes(x = 10,xend = 10,y = 10,yend = 50),size=.5) + #left sideline
+  geom_segment(aes(x = 10,xend = 90,y = 10,yend = 10),size=.5) + #endline
+  geom_segment(aes(x = 5,xend = 95,y = 50,yend = 50),size = 1) + #net
+  geom_segment(aes(x = 90,xend = 90,y = 10,yend = 50),size=.5) + #right sideline
+  geom_segment(aes(x = 10,xend = 90,y = 36.666,yend = 36.666),size=.5) + #3m line
+  geom_point(aes(color = result),
+             size = 3) +
+  scale_color_manual(values = c("kill" = "green",
+                                "other" = "gray")) +
+  facet_wrap(vars(fct_infreq(attack_description),pred_correct)) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(),
+        legend.position = "bottom",
+        axis.text = element_blank(),
+        axis.title = element_blank(),
+        aspect.ratio = 1) +
+  labs(color = "Attack Result",
+       title = "Maarten Van Garderen",
+       subtitle = "11 Kills, 6.97 xK vs. BEL")
+
+```
+
+We see the same trends with attempts inside the attack line and beyond it as far as the model prediction goes. Scoring on attempts that he "should have" scored on and a good number of kills on high balls to z4, it was a good performance for the Outside Hitter against Belgium. 
+
+Finally, we'll look at Thijs Ter Horst. The Outside Hitter finished the match with 7 kills on 9.75 xK.
+
+```{r echo=FALSE}
+
+ggplot(data_attack %>% filter(player_name == "Thijs Ter Horst"),
+       aes(x = prev1x1,
+           y = prev1y1)) +
+  geom_segment(aes(x = 10,xend = 10,y = 10,yend = 50),size=.5) + #left sideline
+  geom_segment(aes(x = 10,xend = 90,y = 10,yend = 10),size=.5) + #endline
+  geom_segment(aes(x = 5,xend = 95,y = 50,yend = 50),size = 1) + #net
+  geom_segment(aes(x = 90,xend = 90,y = 10,yend = 50),size=.5) + #right sideline
+  geom_segment(aes(x = 10,xend = 90,y = 36.666,yend = 36.666),size=.5) + #3m line
+  geom_point(aes(color = result),
+             size = 3) +
+  scale_color_manual(values = c("kill" = "green",
+                                "other" = "gray")) +
+  facet_wrap(vars(fct_infreq(attack_description),pred_correct)) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(),
+        legend.position = "bottom",
+        axis.text = element_blank(),
+        axis.title = element_blank(),
+        aspect.ratio = 1) +
+  labs(color = "Attack Result",
+       title = "Thijs Ter Horst",
+       subtitle = "7 Kills, 9.75 xK vs. BEL")
+
+```
+
+The model shows missed opportunities on the Go, the Bic, and no kills Out of System for Ter Horst in this match. 
+
+For a first look, this seems to pass the eye test in this case study. The model confirms the obvious - In System attacks, especially from inside of 3 meters, should be kills. But beyond the binary classification of kill/no kill, the ability to assign kill probabilities for each individual attempt is really where a model like this shines, in my opinion. There's certainly plenty more to learn and explore, but I have to admit that I'm reeeally fired up to have a working Expected Kills model!
