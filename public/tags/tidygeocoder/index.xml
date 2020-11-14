@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tidygeocoder on Volley Visualization</title>
+    <link>/tags/tidygeocoder/</link>
+    <description>Recent content in tidygeocoder on Volley Visualization</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/tidygeocoder/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NCAA Men&#39;s Volleyball Rosters</title>
+      <link>/post/ncaa_rosters/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ncaa_rosters/</guid>
+      <description>NCAA Men’s Volleyball RostersAfter a bit of a hiatus, I’m back with a project I’ve been working on recently - accumulating men’s volleyball rosters from team sites. This exercise has been a good introduction to web scraping using the {rvest} package as well as data cleaning, particularly using the unite() and separate() functions from {tidyr}, working with strings using str_squish() from {stringr} and gsub(). During this process, I started to get curious about plotting points with maps as to visualize where college men’s volleyball players were coming from.</description>
+    </item>
+    
+  </channel>
+</rss>

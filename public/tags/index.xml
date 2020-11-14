@@ -6,10 +6,73 @@
     <description>Recent content in Tags on Volley Visualization</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NCAA</title>
+      <link>/tags/ncaa/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ncaa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rbokeh</title>
+      <link>/tags/rbokeh/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rbokeh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rosters</title>
+      <link>/tags/rosters/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rosters/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rvest</title>
+      <link>/tags/rvest/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rvest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shiny</title>
+      <link>/tags/shiny/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/shiny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidygeocoder</title>
+      <link>/tags/tidygeocoder/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tidygeocoder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidyverse</title>
+      <link>/tags/tidyverse/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tidyverse/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>expected kills</title>
@@ -35,15 +98,6 @@
       <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/tidymodels/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tidyverse</title>
-      <link>/tags/tidyverse/</link>
-      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/tidyverse/</guid>
       <description></description>
     </item>
     
