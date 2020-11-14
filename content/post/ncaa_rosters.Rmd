@@ -299,7 +299,7 @@ shinyApp(ui = ui, server = server)
 
 ```
 
-<iframe height="800" width="100%" frameborder="no" src="https://natengo1.shinyapps.io/ncaa_men_d1_d2/"> </iframe>
+<iframe height="100%" width="100%" frameborder="no" src="https://natengo1.shinyapps.io/ncaa_men_d1_d2/"> </iframe>
 
 Link to this app hosted on shinyapps.io can be found here: https://natengo1.shinyapps.io/ncaa_men_d1_d2/ or download the code and run it locally on your machine.
 
