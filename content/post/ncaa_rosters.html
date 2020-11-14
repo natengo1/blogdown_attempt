@@ -1,0 +1,308 @@
+---
+title: NCAA Men's Volleyball Rosters
+author: "Nate Ngo"
+date: 2020-11-01
+categories: ["R"]
+tags: ["rbokeh", "tidyverse","shiny","NCAA","rosters","rvest","tidygeocoder"]
+output:
+  blogdown::html_page:
+    toc: false
+runtime: shiny
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="section-ncaa-mens-volleyball-rosters" class="section level1">
+<h1>NCAA Men’s Volleyball Rosters</h1>
+<p>After a bit of a hiatus, I’m back with a project I’ve been working on recently - accumulating men’s volleyball rosters from team sites. This exercise has been a good introduction to web scraping using the {<code>rvest</code>} package as well as data cleaning, particularly using the <code>unite()</code> and <code>separate()</code> functions from {<code>tidyr</code>}, working with strings using <code>str_squish()</code> from {<code>stringr</code>} and <code>gsub()</code>. During this process, I started to get curious about plotting points with maps as to visualize where college men’s volleyball players were coming from. With the help of the {<code>tidygeocoder</code>} package, I was able to match lattitudes and longitudes to hometowns then stumbled across the {<code>rbokeh</code>} package for interactive map plotting. Having wanted to share a Shiny App with publicly available data for some time now, this felt like the right opportunity to do so. While this is not an exhaustive list of rosters by any means, I was happy with the amount of rosters (NCAA DI &amp; DII to start) I was able to pull from team websites to get this off the ground. If anyone has advice or recommendations with expanding this roster list into a full fledge database, I believe it would be worthwhile to maintain this list to track the growth of boys’/men’s volleyball in the US.</p>
+<div id="section-the-data" class="section level2">
+<h2>The Data</h2>
+<p>Gathering and cleaning the data was (is) certainly the most tedious portion of this project, but it gave me some good reps using {<code>rvest</code>} and learning how to work with strings using {<code>stringr</code>}. I’ll go through an example of pulling one team’s rosters from their website for anyone just starting to get into web scraping (like myself!). We’ll start with UCLA.</p>
+<p>First, we need to investigate UCLA’s Men’s Volleyball roster URL and see if we can identify a pattern with how each year’s rosters are listed. Navigating to the most recent roster (2020 at the time this post is written) is found at <a href="https://uclabruins.com/sports/mens-volleyball/roster/">https://uclabruins.com/sports/mens-volleyball/roster/</a>.</p>
+<p>Here, we can select through rosters provided back to 2010. Selecting a previous year reveals the pattern of the urls to be appending the year to the base url such as <a href="https://uclabruins.com/sports/mens-volleyball/roster/2018">https://uclabruins.com/sports/mens-volleyball/roster/2018</a>. Let’s scrape UCLA’s rosters with this information.</p>
+<pre class="r"><code># load necessary packages
+library(tidyverse)
+library(rvest)
+
+# years to pull from
+years &lt;- 2010:2020
+
+# create a vector of urls to scrape rosters from
+urls &lt;- purrr::map_chr(years, ~ paste0(&quot;https://uclabruins.com/sports/mens-volleyball/roster/&quot;,.x))
+
+# iterate scraping rosters over the urls and combine them as a data frame
+ucla &lt;- purrr::map_dfr(urls,
+                       
+                       # use functions from rvest/xml2 to read in the html
+                       ~ read_html(.x) %&gt;%
+  
+                         # identify html nodes with the &lt;table&gt; tag
+                         html_nodes(&quot;table&quot;) %&gt;%
+                         
+                         # from the &lt;table&gt; nodes we gathered, the third item contains
+                         # the table with student-athlete rosters we want
+                         .[[3]] %&gt;%
+                         
+                         # parse the html table into a data frame
+                         html_table(),
+                       
+                       # create a column named `year_index` to label each table
+                       .id = &quot;year_index&quot;) %&gt;%
+  
+  # convert the `year_index` id label to an integer
+  dplyr::mutate(year_index = as.integer(year_index),
+                
+                # match the year of the roster to `year_index`
+                year = years[year_index],
+                school = &quot;UCLA&quot;,
+                school_code = &quot;ucla&quot;)
+
+# take a look at what we scraped!
+ucla %&gt;% glimpse()</code></pre>
+<pre><code>## Rows: 217
+## Columns: 13
+## $ year_index               &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+## $ `#`                      &lt;int&gt; 1, 2, 3, 4, 5, 7, 8, 10, 14, 15, 16, 17, 1...
+## $ `Full Name`              &lt;chr&gt; &quot;Cooper O&#39;Connor&quot;, &quot;Mitchel Johnson&quot;, &quot;Tom...
+## $ Pos                      &lt;chr&gt; &quot;S&quot;, &quot;OH&quot;, &quot;L&quot;, &quot;OH&quot;, &quot;OH/L&quot;, &quot;OH&quot;, &quot;S&quot;, &quot;...
+## $ Ht.                      &lt;chr&gt; &quot;6-2&quot;, &quot;6-6&quot;, &quot;6-0&quot;, &quot;6-5&quot;, &quot;6-5&quot;, &quot;6-5&quot;, ...
+## $ `Academic Year`          &lt;chr&gt; &quot;R-Sr.&quot;, &quot;So.&quot;, &quot;Jr.&quot;, &quot;Fr.&quot;, &quot;R-Jr.&quot;, &quot;Sr...
+## $ `Hometown / High School` &lt;chr&gt; &quot;Long Beach, CA / Los Alamitos&quot;, &quot;Manhatta...
+## $ Pos.                     &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ Wt.                      &lt;int&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ Yr.                      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ year                     &lt;int&gt; 2010, 2010, 2010, 2010, 2010, 2010, 2010, ...
+## $ school                   &lt;chr&gt; &quot;UCLA&quot;, &quot;UCLA&quot;, &quot;UCLA&quot;, &quot;UCLA&quot;, &quot;UCLA&quot;, &quot;U...
+## $ school_code              &lt;chr&gt; &quot;ucla&quot;, &quot;ucla&quot;, &quot;ucla&quot;, &quot;ucla&quot;, &quot;ucla&quot;, &quot;u...</code></pre>
+<p>Check out <a href="https://github.com/tidyverse/rvest" class="uri">https://github.com/tidyverse/rvest</a> for more information on using rvest for web scraping.</p>
+<p>A quick <code>glimpse</code> at our new data frame shows what we were able to scrape from these urls. Let’s clean this up a bit with the relevant pieces of information we’ll want to show in our map.</p>
+<pre class="r"><code>ucla %&gt;%
+  
+  # remove columns we don&#39;t need going forward
+  dplyr::select(-year_index,-`#`,-`Wt.`,-`Yr.`,-`Academic Year`) %&gt;%
+  
+  # combine values for Pos and Pos. into one column
+  tidyr::unite(c(Pos,`Pos.`),      # columns to unite
+               col = &quot;position&quot;,   # new column name
+               na.rm = T) %&gt;%      # prevent NA values from combining
+  
+  # separate hometown and high school into two columns
+  tidyr::separate(col = `Hometown / High School`,    # select column to separate
+                  into = c(&quot;hometown&quot;,&quot;highschool&quot;), # new column names to separate into
+                  sep = &quot;/&quot;) %&gt;%                     # separator between columns
+  
+  # separate hometown into hometown and state
+  tidyr::separate(col = `hometown`,
+                  into = c(&quot;hometown&quot;,&quot;state&quot;),
+                  sep = &quot;,&quot;) %&gt;%
+  
+  # rename columns
+  dplyr::rename(name = `Full Name`,
+                height = `Ht.`) %&gt;%
+  
+  # clean up character values with extraneous spaces with stringr::str_squish then assign to `ucla`
+  dplyr::mutate(across(.cols = c(name,position,hometown,state,highschool),
+                       .fns = str_squish)) -&gt; ucla
+
+# take a look
+ucla %&gt;% glimpse()</code></pre>
+<pre><code>## Rows: 217
+## Columns: 9
+## $ name        &lt;chr&gt; &quot;Cooper O&#39;Connor&quot;, &quot;Mitchel Johnson&quot;, &quot;Tom Hastings&quot;, &quot;...
+## $ position    &lt;chr&gt; &quot;S&quot;, &quot;OH&quot;, &quot;L&quot;, &quot;OH&quot;, &quot;OH/L&quot;, &quot;OH&quot;, &quot;S&quot;, &quot;QH&quot;, &quot;Opp&quot;, &quot;...
+## $ height      &lt;chr&gt; &quot;6-2&quot;, &quot;6-6&quot;, &quot;6-0&quot;, &quot;6-5&quot;, &quot;6-5&quot;, &quot;6-5&quot;, &quot;6-8&quot;, &quot;6-5&quot;,...
+## $ hometown    &lt;chr&gt; &quot;Long Beach&quot;, &quot;Manhattan Beach&quot;, &quot;Yorba Linda&quot;, &quot;Zichro...
+## $ state       &lt;chr&gt; &quot;CA&quot;, &quot;CA&quot;, &quot;CA&quot;, &quot;Israel&quot;, &quot;CA&quot;, &quot;CA&quot;, &quot;CA&quot;, &quot;CA&quot;, &quot;IL...
+## $ highschool  &lt;chr&gt; &quot;Los Alamitos&quot;, &quot;Mira Costa&quot;, &quot;Esperanza&quot;, &quot;Hof Hashron...
+## $ year        &lt;int&gt; 2010, 2010, 2010, 2010, 2010, 2010, 2010, 2010, 2010, 2...
+## $ school      &lt;chr&gt; &quot;UCLA&quot;, &quot;UCLA&quot;, &quot;UCLA&quot;, &quot;UCLA&quot;, &quot;UCLA&quot;, &quot;UCLA&quot;, &quot;UCLA&quot;,...
+## $ school_code &lt;chr&gt; &quot;ucla&quot;, &quot;ucla&quot;, &quot;ucla&quot;, &quot;ucla&quot;, &quot;ucla&quot;, &quot;ucla&quot;, &quot;ucla&quot;,...</code></pre>
+<p>While I won’t go through it here, I did spend some more time cleaning up <code>states</code> and <code>positions</code>, adding a <code>country</code> variable, and using the <code>tidygeocoder</code> package to obtain latitude and longitude data for each city. The most up to date version of the clean roster can be found on my <a href="https://github.com/natengo1/blogdown_attempt/tree/master/content/post">GitHub page</a>.</p>
+</div>
+<div id="section-shiny-app" class="section level2">
+<h2>Shiny App</h2>
+<p>Now that we have some clean data with latitude and longitudes, let’s build an interactive Shiny App to see where NCAA Men’s Volleyball athletes are coming from. <a href="https://shiny.rstudio.com/">RStudio’s Shiny website</a> is a great resource to get started if this is your first go at writing a Shiny App. The <a href="https://shiny.rstudio.com/gallery">gallery</a> contains a lot of great examples and code to help you get started. Again, this app can be found on my GitHub page as linked above. I’ll go through the code with comments here.</p>
+<pre class="r"><code># load necessary packages
+library(tidyverse)
+library(rbokeh)   # interactive map plotting
+library(shiny)
+
+# read in the data
+data0 &lt;- readr::read_rds(&quot;ncaa_roster.rds&quot;)
+
+# Define UI for application that draws a histogram
+ui &lt;- fluidPage(
+    
+  # add title
+  titlePanel(
+    &quot;NCAA Men&#39;s Volleyball - Division I-II Historical Rosters&quot;
+    
+  ), # close titlePanel
+  
+  sidebarLayout(
+    
+    # add a sidebarPanel to house an update button and filters
+    sidebarPanel(
+      width = 2,
+      
+      # create the update button
+      actionButton(inputId = &quot;update&quot;,
+                   label = &quot;Update&quot;),
+      
+      # add some white space between the bottom of the button and the first filter
+      br(),
+      br(),
+      
+      # selector field for year
+      selectizeInput(
+        
+        # inputId to refer back to in the server function below
+        inputId = &quot;year&quot;,
+        
+        # label as seen when the app is run
+        label = &quot;Year&quot;,
+        
+        # define available choices to filter by
+        choices = unique(
+          data0 %&gt;%
+            dplyr::arrange(desc(year)) %&gt;%
+                        dplyr::pull(year)),
+                selected = 2021,
+        
+        # allow multiple years to be selected
+        multiple = TRUE
+        
+      ), # close selectizeInput
+      
+      # selector field for school
+      selectizeInput(
+        inputId = &quot;school&quot;,
+        label = &quot;School&quot;,
+        choices = unique(
+          data0 %&gt;%
+            dplyr::arrange(school) %&gt;%
+            dplyr::pull(school)),
+        multiple = TRUE
+        
+      ), # close selectizeInput
+      
+      # selector field for All-American status
+      selectizeInput(
+        inputId = &quot;all_american&quot;,
+        label = &quot;All-American&quot;,
+        choices = unique(
+          data0 %&gt;%
+            dplyr::arrange(all_american) %&gt;%
+            dplyr::pull(all_american)),
+        multiple = TRUE
+        
+      ), # close selectizeInput
+      
+      # selector field for All-Conference status
+      selectizeInput(
+        inputId = &quot;all_conference&quot;,
+        label = &quot;All-Conference&quot;,
+        choices = unique(
+          data0 %&gt;%
+            dplyr::arrange(all_conference) %&gt;%
+            dplyr::pull(all_conference)),
+        multiple = TRUE
+        
+      ), # close selectizeInput
+      
+      # selector field for home state
+      selectizeInput(
+        inputId = &quot;state&quot;,
+        label = &quot;Home State&quot;,
+        choices = unique(
+          data0 %&gt;%
+            dplyr::arrange(state) %&gt;%
+            dplyr::pull(state)),
+        multiple = TRUE
+        
+      ), # close selectizeInput
+      
+      # selector field for home country
+      selectizeInput(
+        inputId = &quot;country&quot;,
+        label = &quot;Home Country&quot;,
+        choices = unique(
+          data0 %&gt;%
+            dplyr::arrange(country) %&gt;%
+            dplyr::pull(country)),
+        multiple = TRUE
+        
+      ), # close selectizeInput
+      
+    ), # close sidebarPanel
+    
+    # define the main panel (where the map will go)
+    mainPanel(
+      width = 10,
+      
+      # call the map from the server function below and define map size
+      rbokehOutput(
+        outputId = &quot;map&quot;,
+        width = 1000,
+        height = 1000
+        
+      ) # close rbokehOutput
+    ) # close mainPanel
+  ) # close sidebarLayout
+) # close fluidPage
+
+# Define server logic required to draw map
+server &lt;- function(input, output) {
+  
+  # define map output
+  output$map &lt;- renderRbokeh({
+    
+    # trigger update via update action button
+    input$update
+    
+    # define map figure
+    rbokeh::figure(
+      width = 1440,
+      height = 900) %&gt;%
+      ly_map(&quot;world&quot;,col = &quot;gray&quot;) %&gt;%
+      ly_points(long, lat, 
+                data = data0 %&gt;%
+                  
+                  # filter by given inputs from ui function above
+                  # isolate() prevents the output from reloading until the
+                  # update actionbutton is triggered
+                  dplyr::filter(year %in% isolate(input$year) |
+                                  
+                                  # is.null to call all data with no filters
+                                  is.null(isolate(input$year))) %&gt;%
+                  dplyr::filter(school %in% isolate(input$school) |
+                                  is.null(isolate(input$school))) %&gt;%
+                  dplyr::filter(all_american %in% isolate(input$all_american) |
+                                  is.null(isolate(input$all_american))) %&gt;%
+                  dplyr::filter(all_conference %in% isolate(input$all_conference) |
+                                  is.null(isolate(input$all_conference))) %&gt;%
+                  dplyr::filter(state %in% isolate(input$state) |
+                                  is.null(isolate(input$state))) %&gt;%
+                  dplyr::filter(country %in% isolate(input$country) |
+                                  is.null(isolate(input$country))) %&gt;%
+                  
+                  # group and summarise to prevent duplicate names over multiple years
+                  dplyr::group_by(name,hometown,state,country,school,lat,long) %&gt;%
+                  dplyr::summarise(.groups = &quot;drop&quot;),
+                hover = c(name, school, hometown, state, country)) %&gt;%
+      x_axis(label = &quot;&quot;, grid = F, visible = F) %&gt;%
+      y_axis(label = &quot;&quot;, grid = F, visible = F)
+    
+  })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)</code></pre>
+<iframe height="800" width="100%" frameborder="no" src="https://natengo1.shinyapps.io/ncaa_men_d1_d2/">
+</iframe>
+<p>Link to this app hosted on shinyapps.io can be found here: <a href="https://natengo1.shinyapps.io/ncaa_men_d1_d2/" class="uri">https://natengo1.shinyapps.io/ncaa_men_d1_d2/</a> or download the code and run it locally on your machine.</p>
+<p>All in all, this was a fun, side project that I will look to build upon/maintain tracking rosters over time. At the time of writing this, I have started accumulating some DIII rosters and will update this app to reflect those additions in time. I will happily accept any feedback and/or assistance in adding more rosters going forward.</p>
+</div>
+</div>
