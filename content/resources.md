@@ -10,11 +10,15 @@ title: Resources & More
 
 [Eduardo Coaches](https://eduardocoaches.com/) + [Eduardo Fiallos](https://twitter.com/eduardocoaches)
 
+[At Home On The Court](https://marklebedew.com/) + [Mark Lebedew](https://twitter.com/homeonthecourt)
+
 ### Data Science + Other Sports
 
 [Measureables Podcast](https://www.measurablespod.com/podcast) + [Brendan Kent](https://twitter.com/brendankent)
 
 [Expected Value Podcast](https://www.trumedianetworks.com/expected-value-podcast) + [Paul Carr](https://twitter.com/paulcarr)
+
+[The Mockup Blog](https://themockup.blog/) + [Thomas Mock](https://twitter.com/thomas_mock)
 
 ### Data Science
 
