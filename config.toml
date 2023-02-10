@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://volleyviz.netlify.app/"
 languageCode = "en-us"
 title = "Volley Visualization"
 theme = "minimal"
