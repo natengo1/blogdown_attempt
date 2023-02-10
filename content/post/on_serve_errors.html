@@ -1,0 +1,34 @@
+---
+title: On Service Errors
+author: "Nate Ngo"
+date: 2023-02-10
+categories: ["R"]
+tags: ["ggplot2", "tidyverse","serve errors","lm"]
+---
+
+
+
+<p>Oh hello! I had a spark of motivation to dust off this blog and refresh my memory on how to put a post together here. The cause of this spark? Last night, I was at the UCLA vs. Long Beach match in which UCLA handed Long beach their first loss of the season in convincing fashion, winning 25-19, 25-21, 25-20. While that result in itself may not be all that surprising depending who you ask (see: <a href="https://vbelo.substack.com/p/vbelo-scouting-report-february-09" class="uri">https://vbelo.substack.com/p/vbelo-scouting-report-february-09</a>), one particular metric stood out in the match which was UCLA committing 23 service errors to Long Beach’s 9.</p>
+<p><img src="mpsf_bias_se.png" /></p>
+<p>So, let’s talk about service errors! More specifically, I’d like to attempt to provide some context to service errors with some data.
+Taking a sample of 257 international men’s matches since 2021 (962 sets played), I parsed the data to get serve error percentage (<code>sepct</code>), ace percentage (<code>acepct</code>), and overall point scoring percentage (<code>pspct</code>) for each team in each set and paired that with the score margin (<code>score_margin</code>).</p>
+<pre class="r"><code># parse data into the metrics we want, including some identifiers for each row of data
+se_data &lt;- international_data %&gt;%
+  filter(sk == 1) %&gt;%
+  group_by(date,match_id,team_id,opp_team_id,team_id_wonlost_set,set_number,wonlost_set,set_margin) %&gt;%
+  summarise(sepct = mean(sk.grd == 1),
+            acepct = mean(sk.grd == 6),
+            pspct = mean(wonlost == 1),
+            .groups = &quot;drop&quot;)</code></pre>
+<p>Always a good idea to see what the data looks like visually, so first I paired serve error percentage with set margin</p>
+<pre class="r"><code>ggplot(se_data,
+       aes(x = sepct,
+           y = set_margin)) +
+  geom_point() +
+  geom_smooth(method = &quot;lm&quot;,
+              formula = &quot;y ~ x&quot;) +
+  labs(title = &quot;Serve Error Percentage x Set Margin&quot;,
+       subtitle = &quot;International Men (2021-2022)&quot;,
+       x = &quot;Serve Error Percentage&quot;,
+       y = &quot;Set Margin&quot;)</code></pre>
+<p><img src="/post/on_serve_errors_files/figure-html/unnamed-chunk-3-1.png" width="100%" /></p>
