@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE,
 
 Oh hello! I had a spark of motivation to dust off this blog and refresh my memory on how to put a post together here. The cause of this spark? Last night, I was at the UCLA vs. Long Beach match in which UCLA handed Long beach their first loss of the season in convincing fashion, winning 25-19, 25-21, 25-20. While that result in itself may not be all that surprising depending who you ask (see: https://vbelo.substack.com/p/vbelo-scouting-report-february-09), one particular metric stood out in the match which was UCLA committing 23 service errors to Long Beach's 9. 
 
-![](mpsf_bias_se.png)
+![](/img/mpsf_bias_se.png)
 
 So, let's talk about service errors! More specifically, I'd like to attempt to provide some context to service errors with some data. 
 
@@ -171,4 +171,4 @@ And the test metrics confirm this.
 
 When it comes to high level volleyball, service errors are a poor predictor of winning and losing. As the data shows, there is a lot of variance when it comes to set score margin as it relates to serve error percentage within a set. Strategically speaking, attackers are getting more and more physical and putting balls away at a very high rate in system, and an effective way to improve the chances of defending an opponent's attack is by creating easier opportunities to defend or even score direct points through serve pressure. Service errors are a byproduct of this strategy, sure, but I'd argue that if a coach were to not allow servers to "go for it" for wanting to minimize errors, then that coach is actually limiting the team from an avenue to potentially score points on serve, relying solely on defense (i.e. the "just get it in" strategy, and also, REALLY tough to do at the higher levels of the game). On top of that, it would seem rather difficult for a player to improve upon a tough serve if the coach is creating an environment that strictly discourages service errors. 
 
-All in all, I'm not saying fans or observers of the sport can't or shouldn't be annoyed by missed serves. This is just to provide some evidence and understanding that missed serves are likely NOT the reason a team wins or loses, and that there are reasons that they happen as much as they do for some teams. 
+All in all, I'm not saying fans or observers of the sport can't or shouldn't be annoyed by missed serves. This is just to provide some evidence and understanding that missed serves are likely NOT the reason a team wins or loses, and that there are reasons that they happen as much as they do for some teams. So take this new perspective, and go enjoy Round 2 of Long Beach vs UCLA at Long Beach at 7pm PT tonight!

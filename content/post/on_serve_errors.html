@@ -3,32 +3,133 @@ title: On Service Errors
 author: "Nate Ngo"
 date: 2023-02-10
 categories: ["R"]
-tags: ["ggplot2", "tidyverse","serve errors","lm"]
+tags: ["ggplot2", "tidyverse","serve errors","lm","linear regression","parsnip"]
 ---
 
 
 
 <p>Oh hello! I had a spark of motivation to dust off this blog and refresh my memory on how to put a post together here. The cause of this spark? Last night, I was at the UCLA vs. Long Beach match in which UCLA handed Long beach their first loss of the season in convincing fashion, winning 25-19, 25-21, 25-20. While that result in itself may not be all that surprising depending who you ask (see: <a href="https://vbelo.substack.com/p/vbelo-scouting-report-february-09" class="uri">https://vbelo.substack.com/p/vbelo-scouting-report-february-09</a>), one particular metric stood out in the match which was UCLA committing 23 service errors to Long Beach’s 9.</p>
-<p><img src="mpsf_bias_se.png" /></p>
-<p>So, let’s talk about service errors! More specifically, I’d like to attempt to provide some context to service errors with some data.
-Taking a sample of 257 international men’s matches since 2021 (962 sets played), I parsed the data to get serve error percentage (<code>sepct</code>), ace percentage (<code>acepct</code>), and overall point scoring percentage (<code>pspct</code>) for each team in each set and paired that with the score margin (<code>score_margin</code>).</p>
-<pre class="r"><code># parse data into the metrics we want, including some identifiers for each row of data
-se_data &lt;- international_data %&gt;%
+<p><img src="/img/mpsf_bias_se.png" /></p>
+<p>So, let’s talk about service errors! More specifically, I’d like to attempt to provide some context to service errors with some data.</p>
+<p>Taking a sample of 257 international men’s matches since 2021 (962 sets played), I parsed the data to get serve error percentage (<code>sepct</code>), ace percentage (<code>acepct</code>), and overall point scoring percentage (<code>pspct</code>) for each team in each set and paired that with the score margin (<code>score_margin</code>).</p>
+<pre class="r"><code># load in tidyverse packages to work with the data
+library(tidyverse)
+
+# parse data into the metrics we want, including some identifiers for each row of data
+se_data_int &lt;- international_data %&gt;%
   filter(sk == 1) %&gt;%
   group_by(date,match_id,team_id,opp_team_id,team_id_wonlost_set,set_number,wonlost_set,set_margin) %&gt;%
   summarise(sepct = mean(sk.grd == 1),
             acepct = mean(sk.grd == 6),
             pspct = mean(wonlost == 1),
             .groups = &quot;drop&quot;)</code></pre>
-<p>Always a good idea to see what the data looks like visually, so first I paired serve error percentage with set margin</p>
-<pre class="r"><code>ggplot(se_data,
+<p>Always a good idea to see what the data looks like visually, so I paired serve error percentage with set margin, and included the regression line based off of the linear regression model fit for this data.</p>
+<pre class="r"><code>ggplot(se_data_int,
        aes(x = sepct,
            y = set_margin)) +
   geom_point() +
   geom_smooth(method = &quot;lm&quot;,
               formula = &quot;y ~ x&quot;) +
-  labs(title = &quot;Serve Error Percentage x Set Margin&quot;,
+  labs(title = &quot;Serve Error Percentage x Set Margin by Set Played&quot;,
        subtitle = &quot;International Men (2021-2022)&quot;,
        x = &quot;Serve Error Percentage&quot;,
-       y = &quot;Set Margin&quot;)</code></pre>
+       y = &quot;Set Score Margin&quot;)</code></pre>
 <p><img src="/post/on_serve_errors_files/figure-html/unnamed-chunk-3-1.png" width="100%" /></p>
+<p>On first glance, the regression line has a negative slope as we would expect - missing more serves seems like it should decrease the margin of which a team would win/increase the margin of losing a set. But the steepness of the slope seems to be rather flat, and the fit of the model relative to the data points doesn’t seem to be a great fit (lots of variation of points away from the line). Let’s see what the metrics of running the linear model say about this.</p>
+<pre class="r"><code># load in packages from the tidymodels package to assess statistical models
+library(tidymodels)
+
+# run the linear model for serve errors and set margin and store it in sepct_lm
+sepct_lm &lt;- lm(formula = set_margin ~ sepct, data = se_data_int)
+
+# get the model fitting metrics using parsnip::glance(), particularly R^2
+sepct_lm %&gt;% glance()</code></pre>
+<pre><code>## # A tibble: 1 × 12
+##   r.squared adj.r.sq…¹ sigma stati…²  p.value    df logLik    AIC    BIC devia…³
+##       &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+## 1    0.0564     0.0559  5.61    115. 4.46e-26     1 -6047. 12100. 12117.  60492.
+## # … with 2 more variables: df.residual &lt;int&gt;, nobs &lt;int&gt;, and abbreviated
+## #   variable names ¹​adj.r.squared, ²​statistic, ³​deviance</code></pre>
+<p>Looking at the <code>r.squared</code> value of 0.0564 confirms the poor fit of this linear model, or in other words, the model does not explain much of the variation in the response variable (set margin) around its mean. I’m happy to be educated otherwise, but I would interpret this to mean serve error percentage is a poor predictor for set score margin (i.e. winning/losing sets).</p>
+<p>For comparison sake, let’s use this same process and see how point scoring percentage relates to set score margin. Here’s what the data looks like:</p>
+<pre class="r"><code>ggplot(se_data_int,
+       aes(x = pspct,
+           y = set_margin)) +
+  geom_point() +
+  geom_smooth(method = &quot;lm&quot;,
+              formula = &quot;y ~ x&quot;) +
+  labs(title = &quot;Point Scoring Percentage x Set Margin by Set Played&quot;,
+       subtitle = &quot;International Men (2021-2022)&quot;,
+       x = &quot;Point Scoring Percentage&quot;,
+       y = &quot;Set Score Margin&quot;)</code></pre>
+<p><img src="/post/on_serve_errors_files/figure-html/unnamed-chunk-5-1.png" width="100%" /></p>
+<p>And the metrics for the model:</p>
+<pre class="r"><code>pspct_lm &lt;- lm(formula = set_margin ~ pspct, data = se_data_int)
+
+pspct_lm %&gt;% glance()</code></pre>
+<pre><code>## # A tibble: 1 × 12
+##   r.squared adj.r.squ…¹ sigma stati…² p.value    df logLik    AIC    BIC devia…³
+##       &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+## 1     0.633       0.633  3.50   3312.       0     1 -5139. 10284. 10301.  23541.
+## # … with 2 more variables: df.residual &lt;int&gt;, nobs &lt;int&gt;, and abbreviated
+## #   variable names ¹​adj.r.squared, ²​statistic, ³​deviance</code></pre>
+<p>Pretty clear to see how much better of a fit Point Scoring is to Set Score Margin, and the <code>r.squared</code> value of 0.633 confirms that. This makes sense as the points you score on serve should track well with how much you win or lose a set by; the other major factor being side out percentage.</p>
+<p>Just for fun, let’s see how aces/ace percentage tracks with the score margin:</p>
+<pre class="r"><code>ggplot(se_data_int,
+       aes(x = acepct,
+           y = set_margin)) +
+  geom_point() +
+  geom_smooth(method = &quot;lm&quot;,
+              formula = &quot;y ~ x&quot;) +
+  labs(title = &quot;Ace Percentage x Set Margin by Set Played&quot;,
+       subtitle = &quot;International Men (2021-2022)&quot;,
+       x = &quot;Ace Percentage&quot;,
+       y = &quot;Set Score Margin&quot;)</code></pre>
+<p><img src="/post/on_serve_errors_files/figure-html/unnamed-chunk-7-1.png" width="100%" /></p>
+<pre class="r"><code>acepct_lm &lt;- lm(formula = set_margin ~ acepct, data = se_data_int)
+
+acepct_lm %&gt;% glance()</code></pre>
+<pre><code>## # A tibble: 1 × 12
+##   r.squared adj.r.sq…¹ sigma stati…²  p.value    df logLik    AIC    BIC devia…³
+##       &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+## 1     0.118      0.118  5.42    257. 1.94e-54     1 -5982. 11970. 11987.  56539.
+## # … with 2 more variables: df.residual &lt;int&gt;, nobs &lt;int&gt;, and abbreviated
+## #   variable names ¹​adj.r.squared, ²​statistic, ³​deviance</code></pre>
+<p>A bit better than serve errors, but again, not a great fit. Again, this makes sense as aces are relative uncommon within a set, and is only a small portion of how points are scored on serve.</p>
+<p>With all this said, let’s run this analysis one more time, but using some NCAA Men’s data. Here I sample from 113 matches (457 sets) from 2022.</p>
+<pre class="r"><code># parse data into the metrics we want, including some identifiers for each row of data
+se_data_ncaa &lt;- ncaa_data %&gt;%
+  filter(sk == 1) %&gt;%
+  group_by(date,match_id,team_id,opp_team_id,team_id_wonlost_set,set_number,wonlost_set,set_margin) %&gt;%
+  summarise(sepct = mean(sk.grd == 1),
+            acepct = mean(sk.grd == 6),
+            pspct = mean(wonlost == 1),
+            .groups = &quot;drop&quot;)
+
+ggplot(se_data_ncaa,
+       aes(x = sepct,
+           y = set_margin)) +
+  geom_point() +
+  geom_smooth(method = &quot;lm&quot;,
+              formula = &quot;y ~ x&quot;) +
+  labs(title = &quot;Serve Error Percentage x Set Margin by Set Played&quot;,
+       subtitle = &quot;NCAA Men (2022)&quot;,
+       x = &quot;Serve Error Percentage&quot;,
+       y = &quot;Set Score Margin&quot;)</code></pre>
+<p><img src="/post/on_serve_errors_files/figure-html/unnamed-chunk-10-1.png" width="100%" /></p>
+<p>Looks fairly similar to the International Men data.</p>
+<pre class="r"><code>sepct_ncaa_lm &lt;- lm(formula = set_margin ~ sepct, data = se_data_ncaa)
+
+sepct_ncaa_lm %&gt;% glance()</code></pre>
+<pre><code>## # A tibble: 1 × 12
+##   r.squared adj.r.squa…¹ sigma stati…²  p.value    df logLik   AIC   BIC devia…³
+##       &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+## 1    0.0589       0.0578  5.27    56.7 1.24e-13     1 -2796. 5599. 5613.  25158.
+## # … with 2 more variables: df.residual &lt;int&gt;, nobs &lt;int&gt;, and abbreviated
+## #   variable names ¹​adj.r.squared, ²​statistic, ³​deviance</code></pre>
+<p>And the test metrics confirm this.</p>
+<div id="summing-it-up" class="section level2">
+<h2>Summing It Up</h2>
+<p>When it comes to high level volleyball, service errors are a poor predictor of winning and losing. As the data shows, there is a lot of variance when it comes to set score margin as it relates to serve error percentage within a set. Strategically speaking, attackers are getting more and more physical and putting balls away at a very high rate in system, and an effective way to improve the chances of defending an opponent’s attack is by creating easier opportunities to defend or even score direct points through serve pressure. Service errors are a byproduct of this strategy, sure, but I’d argue that if a coach were to not allow servers to “go for it” for wanting to minimize errors, then that coach is actually limiting the team from an avenue to potentially score points on serve, relying solely on defense (i.e. the “just get it in” strategy, and also, REALLY tough to do at the higher levels of the game). On top of that, it would seem rather difficult for a player to improve upon a tough serve if the coach is creating an environment that strictly discourages service errors.</p>
+<p>All in all, I’m not saying fans or observers of the sport can’t or shouldn’t be annoyed by missed serves. This is just to provide some evidence and understanding that missed serves are likely NOT the reason a team wins or loses, and that there are reasons that they happen as much as they do for some teams. So take this new perspective, and go enjoy Round 2 of Long Beach vs UCLA at Long Beach at 7pm PT tonight!</p>
+</div>
