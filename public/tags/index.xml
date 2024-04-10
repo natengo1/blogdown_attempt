@@ -2,174 +2,206 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Volley Visualization</title>
-    <link>/tags/</link>
+    <link>https://volleyviz.netlify.app/tags/</link>
     <description>Recent content in Tags on Volley Visualization</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 10 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://volleyviz.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>NCAA</title>
-      <link>/tags/ncaa/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      <title>ggplot2</title>
+      <link>https://volleyviz.netlify.app/tags/ggplot2/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ncaa/</guid>
+      <guid>https://volleyviz.netlify.app/tags/ggplot2/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>rbokeh</title>
-      <link>/tags/rbokeh/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      <title>linear regression</title>
+      <link>https://volleyviz.netlify.app/tags/linear-regression/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/rbokeh/</guid>
+      <guid>https://volleyviz.netlify.app/tags/linear-regression/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>rosters</title>
-      <link>/tags/rosters/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      <title>lm</title>
+      <link>https://volleyviz.netlify.app/tags/lm/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/rosters/</guid>
+      <guid>https://volleyviz.netlify.app/tags/lm/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>rvest</title>
-      <link>/tags/rvest/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      <title>parsnip</title>
+      <link>https://volleyviz.netlify.app/tags/parsnip/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/rvest/</guid>
+      <guid>https://volleyviz.netlify.app/tags/parsnip/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>shiny</title>
-      <link>/tags/shiny/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      <title>serve errors</title>
+      <link>https://volleyviz.netlify.app/tags/serve-errors/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/shiny/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tidygeocoder</title>
-      <link>/tags/tidygeocoder/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/tidygeocoder/</guid>
+      <guid>https://volleyviz.netlify.app/tags/serve-errors/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tidyverse</title>
-      <link>/tags/tidyverse/</link>
+      <link>https://volleyviz.netlify.app/tags/tidyverse/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://volleyviz.netlify.app/tags/tidyverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NCAA</title>
+      <link>https://volleyviz.netlify.app/tags/ncaa/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tidyverse/</guid>
+      <guid>https://volleyviz.netlify.app/tags/ncaa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rbokeh</title>
+      <link>https://volleyviz.netlify.app/tags/rbokeh/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://volleyviz.netlify.app/tags/rbokeh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rosters</title>
+      <link>https://volleyviz.netlify.app/tags/rosters/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://volleyviz.netlify.app/tags/rosters/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rvest</title>
+      <link>https://volleyviz.netlify.app/tags/rvest/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://volleyviz.netlify.app/tags/rvest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shiny</title>
+      <link>https://volleyviz.netlify.app/tags/shiny/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://volleyviz.netlify.app/tags/shiny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidygeocoder</title>
+      <link>https://volleyviz.netlify.app/tags/tidygeocoder/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://volleyviz.netlify.app/tags/tidygeocoder/</guid>
       <description></description>
     </item>
     
     <item>
       <title>expected kills</title>
-      <link>/tags/expected-kills/</link>
+      <link>https://volleyviz.netlify.app/tags/expected-kills/</link>
       <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/expected-kills/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ggplot2</title>
-      <link>/tags/ggplot2/</link>
-      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/ggplot2/</guid>
+      <guid>https://volleyviz.netlify.app/tags/expected-kills/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tidymodels</title>
-      <link>/tags/tidymodels/</link>
+      <link>https://volleyviz.netlify.app/tags/tidymodels/</link>
       <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tidymodels/</guid>
+      <guid>https://volleyviz.netlify.app/tags/tidymodels/</guid>
       <description></description>
     </item>
     
     <item>
       <title>xK</title>
-      <link>/tags/xk/</link>
+      <link>https://volleyviz.netlify.app/tags/xk/</link>
       <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/xk/</guid>
+      <guid>https://volleyviz.netlify.app/tags/xk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>boys volleyball</title>
-      <link>/tags/boys-volleyball/</link>
+      <link>https://volleyviz.netlify.app/tags/boys-volleyball/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/boys-volleyball/</guid>
+      <guid>https://volleyviz.netlify.app/tags/boys-volleyball/</guid>
       <description></description>
     </item>
     
     <item>
       <title>first point foundation</title>
-      <link>/tags/first-point-foundation/</link>
+      <link>https://volleyviz.netlify.app/tags/first-point-foundation/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/first-point-foundation/</guid>
+      <guid>https://volleyviz.netlify.app/tags/first-point-foundation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>high school</title>
-      <link>/tags/high-school/</link>
+      <link>https://volleyviz.netlify.app/tags/high-school/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/high-school/</guid>
+      <guid>https://volleyviz.netlify.app/tags/high-school/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nfhs</title>
-      <link>/tags/nfhs/</link>
+      <link>https://volleyviz.netlify.app/tags/nfhs/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/nfhs/</guid>
+      <guid>https://volleyviz.netlify.app/tags/nfhs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cal poly</title>
-      <link>/tags/cal-poly/</link>
+      <link>https://volleyviz.netlify.app/tags/cal-poly/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/cal-poly/</guid>
+      <guid>https://volleyviz.netlify.app/tags/cal-poly/</guid>
       <description></description>
     </item>
     
     <item>
       <title>usavolleyball</title>
-      <link>/tags/usavolleyball/</link>
+      <link>https://volleyviz.netlify.app/tags/usavolleyball/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/usavolleyball/</guid>
+      <guid>https://volleyviz.netlify.app/tags/usavolleyball/</guid>
       <description></description>
     </item>
     
     <item>
       <title>savestanfordmvb</title>
-      <link>/tags/savestanfordmvb/</link>
+      <link>https://volleyviz.netlify.app/tags/savestanfordmvb/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/savestanfordmvb/</guid>
+      <guid>https://volleyviz.netlify.app/tags/savestanfordmvb/</guid>
       <description></description>
     </item>
     

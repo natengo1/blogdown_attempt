@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>high school on Volley Visualization</title>
-    <link>/tags/high-school/</link>
+    <link>https://volleyviz.netlify.app/tags/high-school/</link>
     <description>Recent content in high school on Volley Visualization</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/high-school/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://volleyviz.netlify.app/tags/high-school/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>High School Boys&#39; Volleyball</title>
-      <link>/post/hsboysvb/</link>
+      <link>https://volleyviz.netlify.app/post/hsboysvb/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/hsboysvb/</guid>
+      <guid>https://volleyviz.netlify.app/post/hsboysvb/</guid>
       <description>Growth of High School Boys’ VolleyballAfter my first post about #savestanfordmvb, naturally I wanted to look at trends in participation for high school boys’ volleyball. My first stop in looking at this particular topic was the First Point Volleyball Foundation website. First Point was started by my boss, USA MNT and UCLA Men’s Volleyball head coach, John Speraw and is committed to growing boys’ and men’s volleyball in the US by assisting in the creation and development of high school and college programs.</description>
     </item>
     

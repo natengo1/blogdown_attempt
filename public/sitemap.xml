@@ -1,153 +1,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>/categories/</loc>
+    <loc>https://volleyviz.netlify.app/categories/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/ggplot2/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/linear-regression/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/lm/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/post/on_serve_errors/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/parsnip/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/post/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/categories/r/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/serve-errors/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/tidyverse/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/ncaa/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/ncaa/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/post/ncaa_rosters/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/ncaa_rosters/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/rbokeh/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/rosters/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/rvest/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/rbokeh/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/shiny/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/rosters/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/tidygeocoder/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/rvest/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/shiny/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/tidygeocoder/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/tidyverse/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/expectedkills/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/expected-kills/</loc>
     <lastmod>2020-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/expected-kills/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/post/expectedkills/</loc>
     <lastmod>2020-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/ggplot2/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/tidymodels/</loc>
     <lastmod>2020-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/tidymodels/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/xk/</loc>
     <lastmod>2020-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/xk/</loc>
-    <lastmod>2020-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/boys-volleyball/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/boys-volleyball/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/first-point-foundation/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/first-point-foundation/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/high-school/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/high-school/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/hsboysvb/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/post/hsboysvb/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/nfhs/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/nfhs/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/cal-poly/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/cal-poly/</loc>
     <lastmod>2020-08-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/techacademy/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/post/techacademy/</loc>
     <lastmod>2020-08-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/usavolleyball/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/usavolleyball/</loc>
     <lastmod>2020-08-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/savestanfordmvb/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/tags/savestanfordmvb/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/intropost/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/post/intropost/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/about/</loc>
+  </url><url>
+    <loc>https://volleyviz.netlify.app/resources/</loc>
   </url>
-  
-  <url>
-    <loc>/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/resources/</loc>
-  </url>
-  
 </urlset>

@@ -2,57 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tidyverse on Volley Visualization</title>
-    <link>/tags/tidyverse/</link>
+    <link>https://volleyviz.netlify.app/tags/tidyverse/</link>
     <description>Recent content in tidyverse on Volley Visualization</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 10 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://volleyviz.netlify.app/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Service Errors</title>
+      <link>https://volleyviz.netlify.app/post/on_serve_errors/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://volleyviz.netlify.app/post/on_serve_errors/</guid>
+      <description>Oh hello! I had a spark of motivation to dust off this blog and refresh my memory on how to put a post together here. The cause of this spark? Last night, I was at the UCLA vs. Long Beach match in which UCLA handed Long beach their first loss of the season in convincing fashion, winning 25-19, 25-21, 25-20. While that result in itself may not be all that surprising depending who you ask (see: https://vbelo.</description>
+    </item>
     
     <item>
       <title>NCAA Men&#39;s Volleyball Rosters</title>
-      <link>/post/ncaa_rosters/</link>
+      <link>https://volleyviz.netlify.app/post/ncaa_rosters/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/ncaa_rosters/</guid>
+      <guid>https://volleyviz.netlify.app/post/ncaa_rosters/</guid>
       <description>NCAA Men’s Volleyball RostersAfter a bit of a hiatus, I’m back with a project I’ve been working on recently - accumulating men’s volleyball rosters from team sites. This exercise has been a good introduction to web scraping using the {rvest} package as well as data cleaning, particularly using the unite() and separate() functions from {tidyr}, working with strings using str_squish() from {stringr} and gsub(). During this process, I started to get curious about plotting points with maps as to visualize where college men’s volleyball players were coming from.</description>
     </item>
     
     <item>
       <title>Expected Kills</title>
-      <link>/post/expectedkills/</link>
+      <link>https://volleyviz.netlify.app/post/expectedkills/</link>
       <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/expectedkills/</guid>
+      <guid>https://volleyviz.netlify.app/post/expectedkills/</guid>
       <description>Expected Kills (xK)Over the course of this quarantine period, I have been trying to learn (relearn?) more about statistical models, machine learning, how other sports are utilizing these concepts, and how to apply that to volleyball. Well, I finally had a breakthrough after weeks of going through Tidymodels examples found on Julia Silge’s site, all the #TidyTuesday posts on Twitter, conversations with Steve Aronson and Chad Gordon, video tutorials by David Robinson and Andrew Couch, and this blog post by Ismael Gomez about fitting an Expected Goals (xG) model (for football/soccer).</description>
     </item>
     
     <item>
       <title>High School Boys&#39; Volleyball</title>
-      <link>/post/hsboysvb/</link>
+      <link>https://volleyviz.netlify.app/post/hsboysvb/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/hsboysvb/</guid>
+      <guid>https://volleyviz.netlify.app/post/hsboysvb/</guid>
       <description>Growth of High School Boys’ VolleyballAfter my first post about #savestanfordmvb, naturally I wanted to look at trends in participation for high school boys’ volleyball. My first stop in looking at this particular topic was the First Point Volleyball Foundation website. First Point was started by my boss, USA MNT and UCLA Men’s Volleyball head coach, John Speraw and is committed to growing boys’ and men’s volleyball in the US by assisting in the creation and development of high school and college programs.</description>
     </item>
     
     <item>
       <title>USA Volleyball Tech Academy</title>
-      <link>/post/techacademy/</link>
+      <link>https://volleyviz.netlify.app/post/techacademy/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/techacademy/</guid>
+      <guid>https://volleyviz.netlify.app/post/techacademy/</guid>
       <description>USAV Tech AcademyIn case you haven’t heard, for the last three days, USA Volleyball hosted a series of webinars geared towards the data/analytics/technology side of the game which we called the USAV Tech Academy. I, alongside a number of people I feel fortunate to call friends and colleagues, presented and spoke on a range of topics in this realm. If you’re interested in listening to these presentations, you can register ($20 cost) through the previous link and you’ll have access through the end of 2020.</description>
     </item>
     
     <item>
       <title>Strange Times | #savestanfordmvb</title>
-      <link>/post/intropost/</link>
+      <link>https://volleyviz.netlify.app/post/intropost/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/intropost/</guid>
+      <guid>https://volleyviz.netlify.app/post/intropost/</guid>
       <description>Welcome!First of all, thanks for stopping by. My hope is to post here on a somewhat regular basis, but I can’t make any promises. I guess you’ll just have to keep checking back for updates. Second, I hope you’re doing alright in these strange, coronavirus times.
 I decided to start this blog for a number of reasons, the most personal of which is to start a journey to the “Kinda Good Island” (in the words of Learner Lab founder Trevor Ragan) of writing/blogging/putting ideas out in the open.</description>
     </item>

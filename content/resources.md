@@ -8,7 +8,7 @@ title: Resources & More
 
 [Rethinking Volley](https://volleydork.blog/) + [Chad Gordon](https://twitter.com/chadgordon09)
 
-[Eduardo Coaches](https://eduardocoaches.com/) + [Eduardo Fiallos](https://twitter.com/eduardocoaches)
+[Inspiring Coaches](http://inspiringcoaches.us) + [Eduardo Fiallos](https://twitter.com/eduardocoaches)
 
 [At Home On The Court](https://marklebedew.com/) + [Mark Lebedew](https://twitter.com/homeonthecourt)
 

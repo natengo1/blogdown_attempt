@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>serve errors on Volley Visualization</title>
+    <link>https://volleyviz.netlify.app/tags/serve-errors/</link>
+    <description>Recent content in serve errors on Volley Visualization</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://volleyviz.netlify.app/tags/serve-errors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Service Errors</title>
+      <link>https://volleyviz.netlify.app/post/on_serve_errors/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://volleyviz.netlify.app/post/on_serve_errors/</guid>
+      <description>Oh hello! I had a spark of motivation to dust off this blog and refresh my memory on how to put a post together here. The cause of this spark? Last night, I was at the UCLA vs. Long Beach match in which UCLA handed Long beach their first loss of the season in convincing fashion, winning 25-19, 25-21, 25-20. While that result in itself may not be all that surprising depending who you ask (see: https://vbelo.</description>
+    </item>
+    
+  </channel>
+</rss>

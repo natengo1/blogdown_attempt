@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tidymodels on Volley Visualization</title>
-    <link>/tags/tidymodels/</link>
+    <link>https://volleyviz.netlify.app/tags/tidymodels/</link>
     <description>Recent content in tidymodels on Volley Visualization</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/tidymodels/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 28 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://volleyviz.netlify.app/tags/tidymodels/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Expected Kills</title>
-      <link>/post/expectedkills/</link>
+      <link>https://volleyviz.netlify.app/post/expectedkills/</link>
       <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/expectedkills/</guid>
+      <guid>https://volleyviz.netlify.app/post/expectedkills/</guid>
       <description>Expected Kills (xK)Over the course of this quarantine period, I have been trying to learn (relearn?) more about statistical models, machine learning, how other sports are utilizing these concepts, and how to apply that to volleyball. Well, I finally had a breakthrough after weeks of going through Tidymodels examples found on Julia Silge’s site, all the #TidyTuesday posts on Twitter, conversations with Steve Aronson and Chad Gordon, video tutorials by David Robinson and Andrew Couch, and this blog post by Ismael Gomez about fitting an Expected Goals (xG) model (for football/soccer).</description>
     </item>
     

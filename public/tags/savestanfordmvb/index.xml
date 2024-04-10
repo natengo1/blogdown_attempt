@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>savestanfordmvb on Volley Visualization</title>
-    <link>/tags/savestanfordmvb/</link>
+    <link>https://volleyviz.netlify.app/tags/savestanfordmvb/</link>
     <description>Recent content in savestanfordmvb on Volley Visualization</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/savestanfordmvb/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://volleyviz.netlify.app/tags/savestanfordmvb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Strange Times | #savestanfordmvb</title>
-      <link>/post/intropost/</link>
+      <link>https://volleyviz.netlify.app/post/intropost/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/intropost/</guid>
+      <guid>https://volleyviz.netlify.app/post/intropost/</guid>
       <description>Welcome!First of all, thanks for stopping by. My hope is to post here on a somewhat regular basis, but I can’t make any promises. I guess you’ll just have to keep checking back for updates. Second, I hope you’re doing alright in these strange, coronavirus times.
 I decided to start this blog for a number of reasons, the most personal of which is to start a journey to the “Kinda Good Island” (in the words of Learner Lab founder Trevor Ragan) of writing/blogging/putting ideas out in the open.</description>
     </item>
